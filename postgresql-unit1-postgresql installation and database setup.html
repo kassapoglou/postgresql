@@ -1,0 +1,743 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Δωρεάν Μαθήματα SQL Queries και PostgreSQL Administration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  ερωτημάτων και PostGreSQL Administration">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="SQL, queries, Database, Database Administration,
+	basic select statements, διαχείριση βάσεων, sql αιτήματα
+              δωρεάν, δωρεάν μαθήματα, δωρεάν σεμινάρια, μαθήματα SQL, σεμινάρια SQL" />
+	<meta name="author" content="Michail Kassapoglou" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-150900548-1');
+	</script>
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="upper-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<p>Welcome to Kassapoglou</p>
+						</div>
+						<!--<div class="col-xs-6 col-md-push-2 text-right">
+							<p>
+								<ul class="colorlib-social-icons">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								</ul>
+							</p>
+							<p class="btn-apply"><a href="#">Apply Now</a></p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a
+									href="https://kassapoglou.github.io/main/index.html">Kassapoglou</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="https://kassapoglou.github.io/main/index.html">Home</a></li>
+								<li class="has-dropdown active">
+									<a href="https://kassapoglou.github.io/main/courses.html">Courses</a>
+									<!--<ul class="dropdown">
+										<li><a href="https://kassapoglou.github.io/java/java-programming.html">Java</a>
+										</li>
+										<li><a
+												href="https://kassapoglou.github.io/python/python-programming.html">Python</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/go/go-programming.html">GO</a></li>
+										<li><a
+												href="https://kassapoglou.github.io/javascript/javascript-programming.html">JavaScript</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/maven/learning-maven.html">Apache
+												Maven</a></li>
+										<li><a href="https://kassapoglou.github.io/camel/apache-camel-programming.html">Apache
+												Camel</a></li>
+										<li><a href="https://kassapoglou.github.io/spring/spring-programming.html">Spring
+												</a></li>
+									</ul>-->
+								</li>
+								<!--<li><a href="about.html">About</a></li>-->
+								<!--	<li><a href="event.html">Events</a></li>
+								<li><a href="news.html">News</a></li> -->
+								<li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+					<li style="background-image: url(images/postgresql2.png);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+									<div class="slider-text-inner text-center">
+										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL Queries και PostgreSQL Administration</h1>
+										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
+													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 1 -
+												Installation and Database Setup</a></span></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="colorlib-classes">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="row row-pb-lg">
+							<div class="col-md-12 animate-box">
+								<div class="classes class-single">
+									<div class="classes-img" style="background-image: url(images/postgresql2.png);">
+										<span class="price text-center"><small>FREE</small></span>
+									</div>
+									<div class="desc desc2">
+										<h3 align="center"><a
+												href="https://kassapoglou.github.io/spring/spring-programming.html">PostgreSQL Unit 1 - PostgreSQL Installation and
+												Database Setup</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
+<p>Στο σημερινό δωρεάν μάθημα PostgreSQL θα δούμε όλα τα απαραίτητα βήματα εγκατάστασης της PostgreSQL, θα
+	δημιουργήσουμε μια καινούργια βάση και πίνακες και θα εισάγουμε δεδομένα έτσι ώστε να μπορούμε από την επόμενη
+	ενότητα να εξετάσουμε τις query εντολές.</p>
+
+<p>Για αρχή, θα πρέπει να μεταβούμε στο <a
+		href="https://www.postgresql.org/download/windows/">
+		<font color="#0000CC">https://www.postgresql.org/download/windows/
+		</font>
+	</a>και να πατήσουμε επάνω στο
+	“Download the installer” link. Η διαδικασία αυτή είναι μόνο για εγκατάσταση σε Windows λειτουργικό.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL" class="center">
+<p></p>
+
+<p>Αμέσως μετά θα μεταφερθούμε στην εξής download σελίδα:</p>
+
+<p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">
+	<font color="#0000CC">https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+	</font></a></p>
+
+
+<img src="postgresql-unit1/postgresql-unit1-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αν το λειτουργικό σας σύστημα υποστηρίζει 64bit εφαρμογές, τότε επιλέξτε το Windows x86-64 για την έκδοση 12.3 και
+	περιμένετε να ολοκληρωθεί το download. Το αρχείο που θα κατέβει είναι γύρω στα 195MB.</p>
+
+<p>Κάνουμε double-click επάνω στο αρχείο που κατεβάσαμε για να ξεκινήσουμε την διαδικασία της εγκατάστασης. Πατάμε Next
+	στο παράθυρο Setup- PostgreSQL που θα εμφανιστεί.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<img src="postgresql-unit1/postgresql-unit1-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Στο παράθυρο Installation Directory μπορείτε να δεχτείτε το προτεινόμενο directory για να την εγκατάσταση της
+	PostgreSQL ή να το αλλάξετε. Στο δικό μας παράδειγμα, απλά θα δεχτούμε το προτεινόμενο installation directory και θα
+	πατήσουμε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αμέσως μετά θα εμφανιστεί το παράθυρο Select Components μέσα από το οποίο επιλέγουμε αν θέλουμε να εγκαταστήσουμε την
+	PostgreSQL με όλα τα συνοδευτικά προγράμματα ή όχι. Θα τα χρησιμοποιήσουμε σχεδόν όλα αυτά τα components κατά την
+	ανάπτυξη των ενοτήτων οπότε τα αφήνουμε όλα τσεκαρισμένα και πατάμε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Μια από τις τελευταίες επιλογές που πρέπει να δεχτούμε κατά την εγκατάσταση (ή να την αλλάξουμε) είναι σε ποιο
+	directory θα αποθηκεύονται τα δεδομένα των βάσεων που θα δημιουργήσουμε. Για τα παραδείγματα μας, μπορούμε να
+	δεχτούμε και αυτή την πρόταση. Σε παραγωγικό περιβάλλον όμως καλό είναι τα αρχεία τα οποία περιέχουν τα δεδομένα μας
+	να βρίσκονται σε διαφορετικό drive όχι μόνο για να αυξήσουμε την απόδοση της βάσης αλλά και για να είναι ανώδυνη η
+	επαναφορά των δεδομένων σε περίπτωση που τα χάσουμε. Θα μπούμε σε περισσότερες λεπτομέρειες σε μελλοντικές ενότητες.
+	Για τώρα απλά δεχόμαστε το directory που μας προτείνει η PostgreSQL στο παράθυρο Data Directory και πατάμε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Στο παράθυρο Password πρέπει να δηλώσουμε ένα password για τον super χρήστη που έχει το όνομα postgres. Με αυτό το
+	username και το password θα μπορείτε να ενωθείτε στην PostgreSQL μέσα από γραφικές κονσόλες διαχείρισης βάσεων (όπως
+	η pgAdmin 4) ή μέσα από κώδικα όπως java ή python. Επειδή αυτός ο χρήστης έχει όλα τα δικαιώματα επάνω στην βάση,
+	συνήθως σε παραγωγικό περιβάλλον δημιουργούμε και έναν δεύτερο χρήστη με λιγότερα δικαιώματα. Δεν είναι ανάγκη να
+	δηλώσετε κάποιο πολύπλοκο password αν και εφόσον θα χρησιμοποιήσετε την βάση για κώδικα που αναπτύσσετε στον
+	προσωπικό σας υπολογιστή. Ας δώσουμε λοιπόν τον password 123456 για να μπορούμε να το θυμόμαστε όποια στιγμή και αν
+	το χρειαστούμε. Δηλώνουμε λοιπόν το password που αποφασίσαμε και στα δύο πεδία και πατάμε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-8.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Στο παράθυρο Port πρέπει να δεχτούμε ή το προτεινόμενο port ή να δηλώσουμε ένα καινούργιο που στα σίγουρα δεν
+	χρησιμοποιείται από κάποια εφαρμογή. Συνήθως αφήνουμε τον αριθμό αυτό ως έχει αφού, εκτός ότι είναι ο γνωστός
+	αριθμός port για να επικοινωνήσουμε με την PostgreSQL , δεν υπάρχει καμία άλλη γνωστή εφαρμογή που να χρησιμοποιεί
+	αυτό το port. Δεχόμαστε λοιπόν το 5432 και πατάμε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-9.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Στο παράθυρο Advanced Options, αν και εφόσον θα χρησιμοποιήσετε διαφορετική γλώσσα από τα αγγλικά, μπορείτε να την
+	επιλέξετε. Τι σημαίνει αυτό? Σημαίνει ότι με βάση το Locale που θα επιλέξουμε, θα γνωρίζει και η βάση τους
+	αντίστοιχους κανόνες ταξινόμησης και μορφοποίησης αριθμών, χαρακτήρων γραμμάτων, κτλ. Τα δικά μας δεδομένα (αυτά που
+	θα εισάγουμε λίγο παρακάτω) είναι όλα στα αγγλικά οπότε το default locale μας καλύπτει απόλυτα. Πατήστε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-10.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Είμαστε έτοιμοι να ξεκινήσουμε την εγκατάσταση. Το παράθυρο Pre Installation Summary μας δείχνει όλες τις επιλογές
+	μας από τα προηγούμενα παράθυρα και με βάση αυτές τις επιλογές θα προχωρήσει και η εγκατάσταση. Πατήστε Next.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Το Ready to Install παράθυρο είναι μια τελευταία επιβεβαίωση ότι συμφωνείτε με όλες τις επιλογές σας. Απλά πατήστε
+	Next και η εγκατάσταση θα ξεκινήσει.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-12.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Περιμένετε λίγα λεπτά μέχρι να ολοκληρωθεί η διαδικασία.</p>
+
+<img src="postgresql-unit1/postgresql-unit1-13.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αφού ολοκληρωθεί η εγκατάσταση, θα μας ενημερώσει ένα τελευταίο παράθυρο όπου απλά εκεί πατάμε Finish. Μπορείτε να
+	δεχτείτε την προεπιλεγμένη επιλογή του Stack Builder. Πατήστε Finish.
+</p>
+
+<img src="postgresql-unit1/postgresql-unit1-14.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Τώρα θα ξεκινήσει ένας σύντομος δεύτερος wizard που αναφέρεται σε επιπλέον έξτρα εργαλεία που ίσως επιθυμούμε να
+	προσθέσουμε στην εγκατάσταση μας. Αυτός ο wizard εμφανίζεται επειδή επιλέξαμε ότι επιθυμούμε και τον Stack Builder.
+	Αν δεν το είχαμε επιλέξει, δεν θα ξεκινούσε αυτός ο wizard. Ήθελα όμως να δείτε και τις υπόλοιπες επιλογές έτσι ώστε
+	να μην έχετε καμία απορία και να έχετε μια ολοκληρωμένη εικόνα της εγκατάστασης. </p>
+
+<p>Σε αυτό το πρώτο παράθυρο “Welcome to StackBuilder” επιλέξτε την εγκατάσταση της PostgreSQL που μόλις
+	πραγματοποιήσατε και πατήστε Next.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-15.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+</p>
+
+<p>Το επόμενο παράθυρο είναι το πιο ενδιαφέρον. Μας παρουσιάζει μια λίστα με επιπλέον utilities, drivers, κτλ που ίσως
+	επιθυμούμε να εγκαταστήσουμε τοπικά στον υπολογιστή μας. Για παράδειγμα αν πατήσετε στο Database Drivers μπορείτε να
+	δείτε την λίστα με τους έξτρα drivers που μπορεί να κατεβάσει για εσάς ο Stack Builder. Αυτό είναι ένα χρήσιμο
+	εργαλείο γιατί ανάλογα με την εφαρμογή που θα χρησιμοποιήσει την PostgreSQL θα μπορείτε να επιλέξετε και τον
+	κατάλληλο driver με βάση την γλώσσα προγραμματισμού που χρησιμοποιήθηκε για την δημιουργία της εφαρμογής. Γενικότερα
+	δεν θα χρειαστούμε κανένα από αυτά τα εργαλεία για τώρα. Όμως για να προχωρήσει ο Wizard θα χρειαστεί να επιλέξουμε
+	έστω ένα εργαλείο. Για λόγους ευκολίας, επιλέξτε το pgJDBC driver και πατήστε Next.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-16.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+</p>
+
+<p>Το επόμενο παράθυρο απλά επιβεβαιώνουμε ότι θέλουμε να κατεβάσουμε τον java driver για την PostgreSQL. Επιλέξτε το
+	download directory και πατήστε Next.</p>
+
+<p>
+	<p><img src="postgresql-unit1/postgresql-unit1-17.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+	</p>
+</p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-18.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+	</p>
+<p>Όταν κατεβούν τα εργαλεία που έχουμε αποφασίσει τοπικά στον υπολογιστή μας, μπορούμε να πατήσουμε Next και να
+	αφήσουμε το πρόγραμμα να μας τα εγκαταστήσει, ή να επιλέξουμε την επιλογή Skip Installation και να παρακάμψουμε την
+	εγκατάσταση. Στο δικό μας παράδειγμα, ας αφήσουμε το Stack Builder να κάνει την εγκατάσταση (μην επιλέξετε το Skip
+	Installation) έτσι ώστε να έχετε εικόνα το τι συμβαίνει στα επόμενα βήματα.</p>
+
+<p>
+	<p><img src="postgresql-unit1/postgresql-unit1-19.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+	</p>
+</p>
+
+<p>Ξεκινάει λοιπόν τώρα ο Wizard για να εγκαταστήσει το pgJDBC. Απλά πατήστε Next.</p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-20.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+
+<p>Δεχτείτε το Installation Directory που λογικά θα συμφωνεί με εκείνο που είχατε επιλέξει κατά την εγκατάσταση της
+	PostgreSQL. Πατήστε Next.</p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-21.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+
+<p>Δεν υπάρχουν πολλές επιλογές όταν εγκαθιστούμε έναν driver. Οπότε και σε αυτό το παράθυρο, είναι απλά ενημερωτικό,
+	πατήστε Next.</p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-22.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-23.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+
+<p>Πατήστε Finish στο παράθυρο που μας ενημερώνει ότι το pgJDBC εγκαταστάθηκε με επιτυχία.</p>
+
+	<p><img src="postgresql-unit1/postgresql-unit1-24.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+			class="center">
+		<p></p>
+
+<p>Πατήστε Finish και στο Stack Builder.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-25.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Φυσικά, αν οποιαδήποτε στιγμή χρειαστείτε να εγκαταστήσετε κάποιο ακόμα utility, μπορείτε ανά πάσα στιγμή να τρέξετε
+	πάλι το Stack Builder.</p>
+
+<p>Η PostgreSQL έχει εγκατασταθεί αλλά η PostgreSQL δεν είναι βάση δεδομένων, αλλά πρόγραμμα διαχείρισης βάσεων. Οπότε
+	αυτό που πρέπει να κάνουμε σαν επόμενο βήμα είναι να δημιουργήσουμε μια βάση. Μπορούμε να το επιτύχουμε αυτό με δύο
+	τρόπους: (α) με command εντολές από το terminal ή (β) με γραφικό τρόπο μέσα από το pgAdmin 4. Ας ακολουθήσουμε τον
+	δεύτερο τρόπο.</p>
+
+<p>Το pgAdmin 4 είναι μια κονσόλα διαχείρισης των βάσεων της PostgreSQL. Βασικά κάνει πολλά περισσότερα αλλά αυτή την
+	στιγμή ενδιαφερόμαστε για το πως θα δημιουργήσουμε μια βάση. Ας ξεκινήσουμε το pgAdmin 4.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-26.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Αφού γράψουμε το password που είχαμε δηλώσει κατά την εγκατάσταση της PostgreSQL (123456), θα δούμε το εξής
+	περιβάλλον:</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-27.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Η βάση postgres έχει δημιουργηθεί από την PostgreSQL για να έχουμε μια βάση να δημιουργήσουμε τους πίνακες μας και να
+	εισάγουμε τα δεδομένα μας. Το όνομα προέρχεται από τον superuser postgres. Εμείς θα δημιουργήσουμε μια καινούργια
+	βάση κάνοντας δεξί κλικ επάνω στο εικονίδιο databases και επιλέγοντας create → database.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-28.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Το όνομα της βάσης θα είναι Northwind. Αφού το γράψατε πατήστε Save.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-29.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Τώρα που έχουμε την βάση θέλουμε να δημιουργήσουμε πίνακες και να εισάγουμε δεδομένα. Για αυτό τον σκοπό θα
+	χρησιμοποιήσουμε μια βάση που είχε δημιουργήσει παλαιότερα η Microsoft για εκπαιδευτικούς σκοπούς και την είχε
+	ονομάσει Northwind. Για να μεταφέρουμε αυτή την βάση σε postgreSQL περιβάλλον, θα χρειαστεί να πάμε στο gituhub όπου
+	μια ομάδα από προγραμματιστές έφτιαξαν το SQL script να είναι συμβατό με την postgreSQL. Αυτό που πρέπει να κάνουμε
+	εμείς είναι να κάνουμε copy όλο το northwind.sql script ή μπορείτε να το κατεβάσετε και να το κάνετε μετά copy.</p>
+
+<p><a href="https://github.com/pthom/northwind_psql ">
+		<font color="#0000CC">https://github.com/pthom/northwind_psql
+		</font>
+	</a></p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-30.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Αφού λοιπόν έχουμε κάνει copy το northwind.sql ερχόμαστε πίσω στο pgAdmin 4 περιβάλλον κάνουμε δεξί κλικ επάνω στην
+	βάση Northwind και επιλέγουμε Query Tool.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-31.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Μέσα στον Query Editor κάντε paste το Northwind.sql script. Πατήστε το execute εικονίδιο.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-32.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Αν τώρα ανοίξετε το Tables θα δείτε 14 πίνακες με δεδομένα.</p>
+
+<p><img src="postgresql-unit1/postgresql-unit1-33.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+		class="center">
+	<p></p>
+
+<p>Θα μπορούσατε αντί να κάνετε copy-paste να κατεβάσετε το northwind.sql αρχείο από το github και μετά να το ανοίξετε
+	μέσα από το pgAdmin 4. Ίσως αυτό θα ήταν ευκολότερο. Όμως με το copy-paste είχατε την ευκαιρία να ρίξετε μια γρήγορη
+	ματιά στο SQL και να δείτε τα δεδομένα που περάσανε στους πίνακες.</p>
+
+<p>Το τι ακριβώς δεδομένα αντιπροσωπεύει η Northwind θα το δούμε στην επόμενη ενότητα όταν ξεκινήσουμε να μιλάμε για
+	απλά select statements. Για τώρα απλά κρατάμε το γεγονός ότι έχουμε μια βάση με το όνομα Northwind που περιέχει
+	πίνακες με δεδομένα. </p>
+
+
+<!--##############################################################################################################################################################################################-->
+									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></center>
+						<!--<div class="row row-pb-lg animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">23 Comments</h2>
+								<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person1.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person2.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person3.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+							</div>
+						</div>-->
+
+						<!--<div class="row animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">Say something</h2>
+								<form action="#">
+									<div class="row form-group">
+										<div class="col-md-6">
+											<!-- <label for="fname">First Name</label> -->
+						<!--		<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+										</div>
+										<div class="col-md-6">
+											<!-- <label for="lname">Last Name</label> -->
+						<!--<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="email">Email</label> -->
+						<!--<input type="text" id="email" class="form-control" placeholder="Your email address">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="subject">Subject</label> -->
+						<!--<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="message">Message</label> -->
+						<!--	<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="submit" value="Post Comment" class="btn btn-primary">
+									</div>
+								</form>	
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Subscribe Newsletter</h2>
+						<p>Subscribe our newsletter and get latest update</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-12">
+							<form class="form-inline qbstp-header-subscribe">
+								<div class="col-three-forth">
+									<div class="form-group">
+										<input type="text" class="form-control" id="email" placeholder="Enter your email">
+									</div>
+								</div>
+								<div class="col-one-third">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Subscribe Now</button>
+									</div>
+								</div>
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						<h4>PURPOSE</h4>
+						<p>Ο πρωταρχικός λόγος που με ώθησε στο να δημιουργήσω αυτή την
+							ιστοσελίδα και να προσφέρω δωρεάν μαθήματα είναι γιατί πιστεύω ότι
+							η γνώση, σε οποιοδήποτε επίπεδο, πρέπει να μεταδίδεται για να έχει αξία.</p>
+						<p>
+						<ul class="colorlib-social-icons">
+							<!--<li><a href="#"><i class="icon-twitter"></i></a></li>-->
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i
+									class="icon-linkedin"></i></a></li>
+							<!--<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-3 colorlib-widget">
+						<h4>Quick Links</h4>
+						<p>
+						<ul class="colorlib-footer-links">
+							<!--<li><a href="#"><i class="icon-check"></i> About</a></li>-->
+							<!--<li><a href="#"><i class="icon-check"></i> Testimonials</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/"><i class="icon-check"></i>
+								Home</a></li>
+							<li><a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html"><i class="icon-check"></i> PostgreSQL Administration</a></li>
+							<li><a href="https://kassapoglou.github.io/main/courses.html"><i
+									class="icon-check"></i> Courses</a></li>
+							<!--<li><a href="#"><i class="icon-check"></i> Event</a></li>
+                        <li><a href="#"><i class="icon-check"></i> News</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/contact.html"><i
+									class="icon-check"></i> Contact</a></li>
+						</ul>
+						</p>
+					</div>
+
+					<!--<div class="col-md-3 colorlib-widget">
+                    <h4>Recent Post</h4>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-1.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-2.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-3.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                </div> -->
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Contact Info</h4>
+						<ul class="colorlib-footer-links">
+
+							<li><a href="tel://6976434707"><i class="icon-phone"></i> 6976434707</a></li>
+							<li><a href="mailto:michail.kassapoglou@gmail.com"><i class="icon-envelope"></i>
+								michail.kassapoglou@gmail.com</a></li>
+							<li><a href="kassapoglou.github.io/main"><i class="icon-location4"></i>
+								kassapoglou.github.io/main</a></li>
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook2"></i> Facebook</a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i class="icon-linkedin"></i>
+								Linkedin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy;
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									Copyright &copy;<script>
+										document.write(new Date().getFullYear());
+									</script> All rights reserved | This template is made with <i class="icon-heart"
+																								  aria-hidden="true"></i> by <a href="https://colorlib.com"
+																																target="_blank">Colorlib</a>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								</small><br>
+								<small class="block">Demo Images: <a href="http://unsplash.co/"
+																	 target="_blank">Unsplash</a>, <a href="http://pexels.com/"
+																									  target="_blank">Pexels</a></small>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html></html>
