@@ -1,0 +1,638 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Δωρεάν Μαθήματα SQL και PostgreSQL Administration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  και PostGreSQL Administration">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="SQL, queries, Database, Database Administration,
+	basic select statements, διαχείριση βάσεων, sql αιτήματα
+              δωρεάν, δωρεάν μαθήματα, δωρεάν σεμινάρια, μαθήματα SQL, σεμινάρια SQL" />
+	<meta name="author" content="Michail Kassapoglou" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-150900548-1');
+	</script>
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="upper-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<p>Welcome to Kassapoglou</p>
+						</div>
+						<!--<div class="col-xs-6 col-md-push-2 text-right">
+							<p>
+								<ul class="colorlib-social-icons">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								</ul>
+							</p>
+							<p class="btn-apply"><a href="#">Apply Now</a></p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a
+									href="https://kassapoglou.github.io/main/index.html">Kassapoglou</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="https://kassapoglou.github.io/main/index.html">Home</a></li>
+								<li class="has-dropdown active">
+									<a href="https://kassapoglou.github.io/main/courses.html">Courses</a>
+									<!--<ul class="dropdown">
+										<li><a href="https://kassapoglou.github.io/java/java-programming.html">Java</a>
+										</li>
+										<li><a
+												href="https://kassapoglou.github.io/python/python-programming.html">Python</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/go/go-programming.html">GO</a></li>
+										<li><a
+												href="https://kassapoglou.github.io/javascript/javascript-programming.html">JavaScript</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/maven/learning-maven.html">Apache
+												Maven</a></li>
+										<li><a href="https://kassapoglou.github.io/camel/apache-camel-programming.html">Apache
+												Camel</a></li>
+										<li><a href="https://kassapoglou.github.io/spring/spring-programming.html">Spring
+												</a></li>
+									</ul>-->
+								</li>
+								<!--<li><a href="about.html">About</a></li>-->
+								<!--	<li><a href="event.html">Events</a></li>
+								<li><a href="news.html">News</a></li> -->
+								<li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+					<li style="background-image: url(images/postgresql2.png);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+									<div class="slider-text-inner text-center">
+										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL και PostgreSQL Administration</h1>
+										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
+													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 2 -
+												Select Statements</a></span></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="colorlib-classes">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="row row-pb-lg">
+							<div class="col-md-12 animate-box">
+								<div class="classes class-single">
+									<div class="classes-img" style="background-image: url(images/postgresql2.png);">
+										<span class="price text-center"><small>FREE</small></span>
+									</div>
+									<div class="desc desc2">
+										<h3 align="center"><a
+												href="https://kassapoglou.github.io/spring/spring-programming.html">
+												PostgreSQL Unit 2 - Select Statements</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
+<p>Σε αυτό το δωρεάν μάθημα SQL χρησιμοποιώντας την PostgreSQL θα δούμε τις βασικές εντολές με τις οποίες ζητάμε να
+	δούμε όλα τα δεδομένα από έναν πίνακα της βάσης όπως και πως μπορούμε να ζητήσουμε δεδομένα από μεμονωμένες στήλες
+	του πίνακα.</p>
+
+<p>Πριν όμως ξεκινήσουμε ας περιγράψουμε λίγο την δομή της Northwind βάσης που εγκαταστήσαμε στην προηγούμενη ενότητα.
+</p>
+
+<p>Η Northwind καταγράφει όλες τις συναλλαγές πωλήσεων που πραγματοποιούνται μεταξύ της εταιρείας και των πελατών της
+	καθώς και τις συναλλαγές αγοράς μεταξύ της εταιρείας και των προμηθευτών της. Επειδή η PostgreSQL ανήκει στην
+	κατηγορία των RDBMS (Relational Database Management System) βάσεων αυτό σημαίνει ότι επιτρέπει την ύπαρξη δεδομένων
+	χωρισμένα σε λογικές και διαχειρίσιμες μονάδες που ονομάζονται πίνακες. Επίσης υπάρχουν σχέσεις ανάμεσα στους
+	πίνακες έτσι ώστε να μπορούμε να λαμβάνουμε εύκολα τα δεδομένα από πολλαπλούς πίνακες ταυτόχρονα, ή για να θέσουμε
+	κάποιους περιορισμούς κατά την εισαγωγή τους στην βάση. Αυτή η σχέση πινάκων η οποία υπάρχει στην βάση Northwind
+	αντιπροσωπεύεται από το παρακάτω σχεδιάγραμμα.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-1.png" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Για να μπορέσουμε να λάβουμε δεδομένα από την βάση χρησιμοποιούμε την <strong>Structured Query Language (SQL)</strong>. Επειδή
+	υπάρχουν πολλές εντολές στην SQL για διαφορετικούς σκοπούς, αυτές έχουν κατηγοριοποιηθεί σε 5 κατηγορίες. Με αυτό
+	τον τρόπο είναι ευκολότερα και να τις μάθει κάποιος αλλά και να τις αναζητήσει στο documentation.</p>
+
+<p><strong>Data Definition Language (DDL)</strong>: Κάτω από αυτή την κατηγορία ανήκουν οι εντολές με τις οποίες μπορούμε να αλλάξουμε ή
+	να τροποποιήσουμε την δομή της βάσης. Για παράδειγμα η εντολή CREATE TABLE προσθέτει έναν καινούργιο πίνακα στην
+	βάση. </p>
+
+<p><strong>Data Query Language (DQL)</strong>: Εδώ ανήκουν οι εντολές με τις οποίες μπορούμε να λάβουμε δεδομένα από την βάση. Σε αυτή
+	την κατηγορία ανήκει και η εντολή SELECT.</p>
+
+<p><strong>Data Manipulation Language (DML)</strong>: Εδώ ανήκουν οι εντολές εκείνες (όπως INSERT, UPDATE, DELETE) με τις οποίες μπορούμε
+	είτε να τροποποιήσουμε τα δεδομένα που είναι αποθηκευμένα στους πίνακες είτε να προσθέσουμε καινούργια, είτε να τα
+	διαγράψουμε.</p>
+
+<p><strong>Data Control Language (DCL)</strong>: Αυτές οι εντολές χρησιμοποιούνται για να δώσουμε δικαιώματα πρόσβασης στη βάση ή να τα
+	αφαιρέσουμε. Σε αυτή την κατηγορία ανήκουν εντολές όπως GRANT και REVOKE.</p>
+
+<p><strong>Transaction Control Commands</strong>: Εδώ ανήκουν οι εντολές που διαχειρίζονται πολλαπλά δεδομένα μαζί σαν μια ομάδα. Τέτοιου
+	είδους εντολές είναι η COMMIT και η ROLLBACK.</p>
+
+<p>Γυρνώντας πίσω στο σενάριο μας λοιπόν και συγκεκριμένα στην βάση Northwind θα επιθυμούσαμε για αρχή να δούμε όλα τα
+	δεδομένα που υπάρχουν στον πίνακα customer. Πως μπορούμε να το κάνουμε αυτό με την SQL?</p>
+
+<p>Στο γραφικό περιβάλλον της PostgreSQL μπορούμε πολύ εύκολα να λάβουμε δεδομένα μέσα από τον Query Editor. Για να το
+	ανοίξουμε, πατάμε στο εικονίδιο της βάσης με το βέλος, επάνω αριστερά στην οθόνη.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Τώρα μέσα στο Query Editor που έχει ανοίξει στα δεξιά της οθόνη σας μπορούμε να γράψουμε τα SQL αιτήματα μας. </p>
+
+<img src="postgresql-unit2/postgresql-unit2-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Στην PostgreSQL η εντολή <strong>SELECT</strong> είναι εκείνη που χρησιμοποιείται για να ξεκινήσει ένα query στην βάση και να λάβουμε
+	δεδομένα από έναν πίνακα ή από πολλαπλούς πίνακες. Ας γράψουμε ένα απλό SELECT query μέσα στον Query Editor ας το
+	εκτελέσουμε και μετά θα εξηγήσουμε τι ακριβώς επιτύχαμε με αυτό.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+<p>Στην SQL αυτό που θα καταφέρετε μετά από κάποια μικρή εξάσκηση με τις εντολές είναι να μπορείτε να μεταφράζεται τις
+	λέξεις, που στην ουσία είναι οι απαιτήσεις σας, σε SQL εντολές. Σε αυτό το παράδειγμα, αυτό που μας είχε ζητηθεί σαν
+	αίτημα είναι το εξής:
+	“Θέλουμε να δούμε όλα τα δεδομένα μέσα στον πίνακα customers”</p>
+
+<p>Τώρα θα πρέπει να μεταφράσουμε αυτές τις λέξεις σε SQL εντολές. Επειδή ζητάμε να δούμε δεδομένα από την βάση (χωρίς
+	τροποποίηση) τότε η εντολή που χρειαζόμαστε είναι η SELECT και αναφερόμαστε στην DQL κατηγορία εντολών. Οπότε για να
+	λάβουμε κάτι από την βάση πάντα ξεκινάμε την εντολή μας με SELECT. Αμέσως μετά πρέπει να επιλέξουμε πόσες στήλες από
+	τον πίνακα θέλουμε να δούμε. Η επιλογή για να επιλέξουμε όλες τις στήλες από έναν πίνακα είναι ο αστερίσκος ( * ).
+	Σε λίγο θα δούμε πως μπορούμε να επιλέξουμε και μεμονωμένες στήλες. Αφού λοιπόν επιλέξαμε και τις στήλες το αμέσως
+	επόμενο βήμα είναι από ποιόν πίνακα θα ζητήσουμε αυτά τα δεδομένα. Στο συγκεκριμένο παράδειγμα τα ζητάμε από τον
+	πίνακα customers. Το αποτέλεσμα που βλέπετε στην εικόνα δεν είναι όλα τα δεδομένα αλλά ένα δείγμα των δεδομένων.
+</p>
+
+<p>Κάθε ολοκληρωμένο query τελειώνει με <strong>semicolon( ; )</strong>. Είναι πολύ εύκολο να το ξεχνάμε όμως είναι πολύ σημαντικό για
+	την εκτέλεση του query.</p>
+
+<p>Αν και το SELECT * είναι πολύ χρήσιμο, εσείς ίσως επιθυμούσατε να δείτε όχι όλες τις στήλες από έναν πίνακα αλλά μόνο
+	συγκεκριμένες στήλες. Ίσως το σενάριο ήταν κάπως έτσι
+	“Θέλουμε να δούμε το όνομα της εταιρείας, την πόλη και την χώρα των προμηθευτών”</p>
+
+<p>Ο πίνακας των προμηθευτών ονομάζεται suppliers. Όμως πως ονομάζονται οι στήλες μέσα στον πίνακα για να τις
+	επιλέξουμε? Για να βρούμε αυτήν την πληροφορία πατάμε επάνω στην επιλογή Columns του πίνακα suppliers.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Επειδή λοιπόν ζητάμε μεμονωμένες στήλες από τον πίνακα suppliers, αντί να χρησιμοποιήσουμε αστερίσκο απλά γράφουμε τα
+	ονόματα των στηλών. Η σειρά με την οποία θα γράψετε τα ονόματα θα είναι και η σειρά με την οποία θα εμφανιστούν οι
+	στήλες στην οθόνη σας. </p>
+
+<img src="postgresql-unit2/postgresql-unit2-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Τώρα επιθυμούμε να δούμε μόνο τις χώρες στις οποίες η εταιρεία έχει πελάτες. Το λογικό θα ήταν να γράφατε το εξής
+	απλό query:</p>
+
+<img src="postgresql-unit2/postgresql-unit2-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αν και λαμβάνουμε την πληροφορία που θέλουμε θα πρέπει εμείς να ψάξουμε για τις χώρες που υπάρχουν μέσα στην στήλη
+	country γιατί στο αποτέλεσμα υπάρχουν ονόματα χωρών που εμφανίζονται πολλαπλές φορές. Σε κάθε χώρα μπορεί να έχουμε
+	περισσότερους από έναν πελάτη και αυτό είναι λογικό. Εμείς όμως επιθυμούμε να δούμε το σύνολο των χωρών χωρίς όμως
+	τις διπλές ή τριπλές εγγραφές. Πως μπορούμε να το κάνουμε αυτό?</p>
+
+<p>Για να λάβουμε σαν αποτέλεσμα μοναδικές τιμές πρέπει να προσθέσουμε την λέξη <strong>DISTINCT</strong> μπροστά από το όνομα της
+	στήλης. Η λέξη DISTINCT αυτόματα φιλτράρει τα δεδομένα και δείχνει κάθε διαφορετική τιμή της στήλης μια μόνο φορά.
+	Με άλλα λόγια το αποτέλεσμα είναι οι μοναδικές τιμές της στήλης.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-8.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Η λέξη DISTINCT εφαρμόζεται μόνο σε μια στήλη. Αυτό σημαίνει ότι αν ζητούσαμε να δούμε τις πόλεις αλλά και τις χώρες
+	στις οποίες η εταιρεία έχει πελάτες, αλλά θέλαμε να δούμε μοναδικές τιμές για τις πόλεις τότε το query μας θα ήταν
+	το εξής:</p>
+
+<img src="postgresql-unit2/postgresql-unit2-9.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αν τώρα θέλουμε να γνωρίζουμε όχι μόνο τις μοναδικές χώρες αλλά και τον συνολικό αριθμό των διαφορετικών χωρών στις
+	οποίες η εταιρεία έχει πελάτες τότε πρέπει να προσθέσουμε άλλη μια λέξη που ονομάζεται <strong>COUNT</strong>. Στην ουσία το COUNT( )
+	είναι ένα function το οποίο δέχεται σαν παράμετρο στην παρένθεση του την στήλη στην οποία θα εφαρμοστεί. Ας δούμε
+	πρώτα πως εφαρμόζεται στην στήλη city.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-10.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Ο αριθμός που εμφανίζεται περιέχει όλες τις χώρες που είναι αποθηκευμένες στον πίνακα μαζί με τις διπλές και τριπλές
+	τιμές τους. Αν τώρα θέλουμε να δούμε σε πόσες συνολικά μοναδικές χώρες έχει η εταιρεία σαν πελάτες, τότε μπορούμε να
+	συνδυάσουμε το COUNT με το DISTINCT</p>
+
+<img src="postgresql-unit2/postgresql-unit2-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αν τώρα θέλουμε να βρούμε τον συνολικό αριθμό γραμμών από δεδομένα που περιέχει ένας πίνακας τότε μπορούμε να
+	χρησιμοποιήσουμε το <strong>COUNT( * )</strong>. Συνήθως χρησιμοποιούμε αυτή την επιλογή όταν θέλουμε να βρούμε τον πραγματικό αριθμό
+	γραμμών δεδομένων μέσα σε ένα πίνακα.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-12.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Φυσικά με το SELECT μπορούμε να κάνουμε πολλά περισσότερα. Όπως για παράδειγμα να κάνουμε αριθμητικές πράξεις. Μην
+	ξεχνάτε ότι το SELECT δεν επηρεάζει τα δεδομένα μας στους πίνακες. Οπότε μπορούμε να δοκιμάσουμε διάφορα υποτιθέμενα
+	σενάρια και να δούμε τα αποτελέσματα τους στην οθόνη μας.</p>
+
+<p>Μια από τις πληροφορίες που θέλουμε να λάβουμε από τα δεδομένα της Northwind είναι να δούμε πόσες μέρες πέρασαν από
+	τότε που έλαβε η εταιρεία μια παραγγελία μέχρι να την στείλει. Οι παραγγελίες βρίσκονται στον πίνακα Orders.</p>
+
+<p>Όπως βλέπουμε από τα δεδομένα του πίνακα Orders υπάρχουν οι στήλες order_date και shipped_date όμως δεν υπάρχει η
+	διαφορά τους. Μπορούμε όμως να δημιουργήσουμε εμείς μια καινούργια στήλη που θα είναι η αφαίρεση της order_date από
+	την shipped_date. Για να γνωρίζουμε για ποιον πελάτη είναι η κάθε παραγγελία, θα προσθέσουμε και την στήλη
+	customer_id.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-13.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Επειδή η δεύτερη στήλη είναι δημιουργία της αφαίρεσης των δύο στηλών βλέπετε πως το όνομα είναι κάπως περίεργο.
+	Μπορούμε να δώσουμε ένα ψευδώνυμο (alias) στην στήλη χρησιμοποιώντας την λέξη <strong>as</strong> και αμέσως μετά το όνομα που
+	θέλουμε να έχει η καινούργια μας στήλη. Μπορούμε επίσης να δώσουμε alias ονόματα και σε στήλες που ήδη υπάρχουν στον
+	πίνακα. Συνήθως το κάνουμε αυτό γιατί κάποιες στήλες αντί για customer_id ίσως έχουν ονομαστεί cust_id και θέλουμε
+	στο τελικό report που θα εμφανιστεί στην οθόνη να είναι ξεκάθαρη η περιγραφή των δεδομένων ανά στήλη.</p>
+
+<img src="postgresql-unit2/postgresql-unit2-14.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Πριν κλείσουμε, θα ήθελα να αναφερθώ σε έναν εύκολο τρόπο για να γράφετε τις στήλες ενός πίνακα στο queries. Για να
+	μην κάνετε κάποιο λάθος στα ονόματα των στηλών, μπορείτε απλά να τα κάνετε drag and drop από τα columns στον query
+	editor. </p>
+
+<img src="postgresql-unit2/postgresql-unit2-15.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<!--##############################################################################################################################################################################################-->
+									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></center>
+						<!--<div class="row row-pb-lg animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">23 Comments</h2>
+								<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person1.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person2.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person3.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+							</div>
+						</div>-->
+
+						<!--<div class="row animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">Say something</h2>
+								<form action="#">
+									<div class="row form-group">
+										<div class="col-md-6">
+											<!-- <label for="fname">First Name</label> -->
+						<!--		<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+										</div>
+										<div class="col-md-6">
+											<!-- <label for="lname">Last Name</label> -->
+						<!--<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="email">Email</label> -->
+						<!--<input type="text" id="email" class="form-control" placeholder="Your email address">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="subject">Subject</label> -->
+						<!--<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="message">Message</label> -->
+						<!--	<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="submit" value="Post Comment" class="btn btn-primary">
+									</div>
+								</form>	
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Subscribe Newsletter</h2>
+						<p>Subscribe our newsletter and get latest update</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-12">
+							<form class="form-inline qbstp-header-subscribe">
+								<div class="col-three-forth">
+									<div class="form-group">
+										<input type="text" class="form-control" id="email" placeholder="Enter your email">
+									</div>
+								</div>
+								<div class="col-one-third">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Subscribe Now</button>
+									</div>
+								</div>
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						<h4>PURPOSE</h4>
+						<p>Ο πρωταρχικός λόγος που με ώθησε στο να δημιουργήσω αυτή την
+							ιστοσελίδα και να προσφέρω δωρεάν μαθήματα είναι γιατί πιστεύω ότι
+							η γνώση, σε οποιοδήποτε επίπεδο, πρέπει να μεταδίδεται για να έχει αξία.</p>
+						<p>
+						<ul class="colorlib-social-icons">
+							<!--<li><a href="#"><i class="icon-twitter"></i></a></li>-->
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i
+									class="icon-linkedin"></i></a></li>
+							<!--<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-3 colorlib-widget">
+						<h4>Quick Links</h4>
+						<p>
+						<ul class="colorlib-footer-links">
+							<!--<li><a href="#"><i class="icon-check"></i> About</a></li>-->
+							<!--<li><a href="#"><i class="icon-check"></i> Testimonials</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/"><i class="icon-check"></i>
+								Home</a></li>
+							<li><a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html"><i class="icon-check"></i> PostgreSQL Administration</a></li>
+							<li><a href="https://kassapoglou.github.io/main/courses.html"><i
+									class="icon-check"></i> Courses</a></li>
+							<!--<li><a href="#"><i class="icon-check"></i> Event</a></li>
+                        <li><a href="#"><i class="icon-check"></i> News</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/contact.html"><i
+									class="icon-check"></i> Contact</a></li>
+						</ul>
+						</p>
+					</div>
+
+					<!--<div class="col-md-3 colorlib-widget">
+                    <h4>Recent Post</h4>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-1.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-2.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-3.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                </div> -->
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Contact Info</h4>
+						<ul class="colorlib-footer-links">
+
+							<li><a href="tel://6976434707"><i class="icon-phone"></i> 6976434707</a></li>
+							<li><a href="mailto:michail.kassapoglou@gmail.com"><i class="icon-envelope"></i>
+								michail.kassapoglou@gmail.com</a></li>
+							<li><a href="kassapoglou.github.io/main"><i class="icon-location4"></i>
+								kassapoglou.github.io/main</a></li>
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook2"></i> Facebook</a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i class="icon-linkedin"></i>
+								Linkedin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy;
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									Copyright &copy;<script>
+										document.write(new Date().getFullYear());
+									</script> All rights reserved | This template is made with <i class="icon-heart"
+																								  aria-hidden="true"></i> by <a href="https://colorlib.com"
+																																target="_blank">Colorlib</a>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								</small><br>
+								<small class="block">Demo Images: <a href="http://unsplash.co/"
+																	 target="_blank">Unsplash</a>, <a href="http://pexels.com/"
+																									  target="_blank">Pexels</a></small>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html></html>
