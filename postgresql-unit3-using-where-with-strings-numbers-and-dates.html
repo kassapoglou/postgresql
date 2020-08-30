@@ -7,7 +7,8 @@
 	<title>Δωρεάν Μαθήματα SQL και PostgreSQL Administration</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
-		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL και PostGreSQL Administration">
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  και PostGreSQL Administration">
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="SQL, queries, Database, Database Administration,
 	basic select statements, διαχείριση βάσεων, sql αιτήματα
@@ -147,7 +148,8 @@
 										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL και PostgreSQL Administration</h1>
 										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
 													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
-											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">SQL & PostgreSQL Administration</a></span></h2>
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 3 -
+												Using WHERE with Strings, Numbers and Dates</a></span></h2>
 									</div>
 								</div>
 							</div>
@@ -169,44 +171,129 @@
 									</div>
 									<div class="desc desc2">
 										<h3 align="center"><a
-												href="https://kassapoglou.github.io/spring/spring-programming.html">ΔΩΡΕΑΝ
-												ΜΑΘΗΜΑΤΑ SQL ΚΑΙ PostgreSQL Administration</a></h3>
-													
-					<p>Κάθε σύγχρονη επιχείρηση διαθέτει δεδομένα, τα οποία απαιτούν κάποια οργανωμένη μέθοδο ή μηχανισμό για την διατήρηση και ανάκτηση τους. Όταν τα δεδομένα διατηρούνται εντός μιας βάσης δεδομένων, αυτός ο μηχανισμός αναφέρεται ως σύστημα διαχείρισης βάσεων δεδομένων (DBMS). </p>
+												href="https://kassapoglou.github.io/spring/spring-programming.html">
+												PostgreSQL Unit 3 - Using WHERE with Strings, Numbers and Dates</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
+<p>Στο σημερινό δωρεάν μάθημα SQL θα δούμε πως μπορούμε να χρησιμοποιήσουμε το WHERE για να φιλτράρουμε τα δεδομένα που
+	θέλουμε να δούμε από έναν πίνακα.</p>
 
-					<p>Οι σύγχρονες βάσεις δεδομένων σε συνδυασμό με τις web τεχνολογίες είναι ένας τυπικός συνδυασμός που
-						χρησιμοποιείται από τις επιχειρήσεις για τη διαχείριση των δεδομένων τους και στο να παραμείνουν
-						ανταγωνιστικές. </p>
+<p>Συνήθως δεν επιθυμούμε να δούμε όλα τα δεδομένα ενός πίνακα αλλά μια συγκεκριμένη ομάδα αυτών. Για παράδειγμα, από
+	τον πίνακα customers θέλουμε να δούμε την λίστα με τους πελάτες που βρίσκονται μόνο στην Γερμανία. Για να το
+	πετύχουμε αυτό, θα πρέπει να προσθέσουμε μια ακόμα γραμμή SQL κώδικα στο Query μας που να περιέχει την λέξη κλειδί
+	WHERE. Η γραμμή που περιέχει το WHERE στην ουσία περιγράφει την συνθήκη με την οποία θα φιλτράρουμε τα δεδομένα πριν
+	εμφανιστούν στην οθόνη μας.</p>
 
-					<p>Στις ενότητες που θα αναπτύξουμε, θα αναλύσουμε τις βασικές εντολές SQL με τις οποίες διαχειριζόμαστε τα
-						δεδομένα μιας PostgreSQL βάσης όπως και κάποιες μεθόδους συντήρησης και ασφάλειας της ίδιας της βάσης. Οι περισσότερες
-						από τις SQL εντολές που θα αναλύσουμε μπορούν να εφαρμοστούν με σχεδόν καμία αλλαγή και σε άλλες βάσεις
-						δεδομένων όπως Oracle ή MySQL. Η PostgreSQL είναι μια εντελώς δωρεάν βάση δεδομένων, έτοιμη για production-use
-						και με ένα τεράστιο community που απαντάει σε όλες σας τις ερωτήσεις.</p>
+<p>Επειδή αρχίζουμε και προσθέτουμε πολλές καινούργιες εντολές στο SQL αίτημα μας προς την βάση, θα πρέπει να γνωρίζουμε
+	και που ανήκουν συντακτικά αυτές οι εντολές. Υπάρχει συγκεκριμένη σειρά με την οποία θα πρέπει να συνδυάζονται οι
+	εντολές. Η γενική δομή λοιπόν που θα έχει ένα αίτημα μας προς την βάση που περιέχει και το WHERE θα είναι ως εξής:
+</p>
 
-									</div>
-									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-</form></center>
-									<h1 align="center">ΕΝΟΤΗΤΕΣ</h1>
-						  <p>Ενότητα 1 - <a href="postgresql-unit1-postgresql-installation-and-database-setup.html">
-						  		<font color="#0000CC">PostgreSQL installation and database setup</font>
-						  	</a><br /></p>
-							   <p>Ενότητα 2 - <a href="postgresql-unit2-postgresql-select-statements.html">
-						  		<font color="#0000CC">SELECT Statements</font>
-						  	</a><br /></p>
-							<p>Ενότητα 3 - <a href="postgresql-unit3-using-where-with-strings-numbers-and-dates.html">
-						  		<font color="#0000CC">Using WHERE with Strings, Numbers and Dates</font>
-						  	</a><br /></p>
-						  
-						 <!-- <p >Ενότητα 2 - <a href="spring-unit2-constructor-based-dependency-injection.html"><font color="#0000CC">Constructor-based Dependency Injection</font> </a><br /></p>
-						  <p >Ενότητα 3 - <a href="spring-unit3-constructor-arg-attributes.html"><font color="#0000CC">Constructor-arg attributes</font> </a><br /></p>-->
-								</div>
-							</div>
-						</div>
+<p><strong>
+		<xmp>SELECT <coloumn1>,<column2>,…</xmp></strong>
+	</p>
+<p><strong><xmp>FROM <table_name></xmp></strong></p>
+<p><strong><xmp>WHERE <condition>;</xmp></strong></p>
+
+<p>Στην πιο απλή αναζήτηση που κάνουμε σε έναν πίνακα, θα πρέπει να φιλτράρουμε τα δεδομένα ανάλογα με το data type που
+	είναι γραμμένα. Δηλαδή, υπάρχουν στήλες σε πίνακες που περιέχουν αριθμούς, άλλες που περιέχουν ονόματα και άλλες
+	ημερομηνίες. Θα πρέπει λοιπόν όταν χρησιμοποιούμε το WHERE να φιλτράρουμε τα δεδομένα με το σωστό data type.</p>
+
+<p>Στο πρώτο μας παράδειγμα, θέλουμε να δούμε από τον πίνακα customers, το όνομα της εταιρείας και το όνομα του ατόμου
+	με το οποίο μπορούμε να έρθουμε σε επικοινωνία για εκείνους τους πελάτες που βρίσκονται στην πόλη του Λονδίνου.</p>
+
+<p>Για να πετύχουμε κάτι τέτοιο, πρέπει στο WHERE να αναζητήσουμε στην στήλη city με το String ‘London’ όπως δείχνει το
+	παρακάτω παράδειγμα.
+</p>
+<img src="postgresql-unit3/postgresql-unit3-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Η γενική φόρμουλα για να χρησιμοποιήσουμε το WHERE είναι να ξεκινήσουμε το clause με την λέξη κλειδί WHERE, αμέσως
+	μετά να ονομάσουμε την στήλη ή τις στήλες με την οποία θα φιλτράρουμε τα δεδομένα και αμέσως μετά την τιμή την οποία
+	ψάχνουμε. Στο συγκεκριμένο παράδειγμα ψάχνουμε για το String όνομα London. Για να ψάξουμε για ένα όνομα που είναι
+	αποθηκευμένο στην στήλη του πίνακα σαν String θα πρέπει να το περικλύσουμε μέσα σε single quotes ( ‘ ‘).</p>
+
+<p>Αν τώρα θέλουμε να καταλάβουμε λίγο περισσότερο το τι ακριβώς συμβαίνει όταν εκτελούμε ένα τέτοιο query μπορούμε να
+	δώσουμε την εξής εξήγηση: Το query ξεκινάει πάντα πρώτα από το from για να μπορέσει να βρει τον πίνακα. Όταν βρεθεί
+	ο πίνακας, εκτελείται το SELECT και όλα τα δεδομένα από τις στήλες company_name και contact_name φορτώνονται στην
+	μνήμη. Τέλος, στα δεδομένα που φορτώθηκαν από το SELECT γίνεται ένα φιλτράρισμα με βάση την συνθήκη που έχουμε
+	ορίσει στο WHERE. Στο παράδειγμα μας, θα ψάξουμε την στήλη city και όπου βρεθεί το όνομα London θα δούμε το
+	αντίστοιχο company_name και contact_name. </p>
+
+<p>Αν τώρα θέλουμε να καταλάβουμε λίγο περισσότερο το τι ακριβώς συμβαίνει όταν εκτελούμε ένα τέτοιο query μπορούμε να
+	δώσουμε την εξής εξήγηση: Το query ξεκινάει πάντα πρώτα από το from για να μπορέσει να βρει τον πίνακα. Όταν βρεθεί
+	ο πίνακας, εκτελείται το SELECT και όλα τα δεδομένα από τις στήλες company_name και contact_name φορτώνονται στην
+	μνήμη. Τέλος, στα δεδομένα που φορτώθηκαν από το SELECT γίνεται ένα φιλτράρισμα με βάση την συνθήκη που έχουμε
+	ορίσει στο WHERE. Στο παράδειγμα μας, θα ψάξουμε την στήλη city και όπου βρεθεί το όνομα London θα δούμε το
+	αντίστοιχο company_name και contact_name. </p>
+
+<img src="postgresql-unit3/postgresql-unit3-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Αν και φαίνεται πολύ απλή η χρήση του WHERE με τα Strings υπάρχει κάποιος κίνδυνος όμως να μην λειτουργήσει σωστά.
+	Αυτό συμβαίνει γιατί η PostgreSQL θα αναζητήσει το String μέσα στην στήλη του πίνακα ακριβώς όπως το έχετε γράψει.
+	Αν λοιπόν εσείς ζητάτε το london με πεζούς χαρακτήρες αλλά στην πραγματικότητα το όνομα έχει γραφτεί στην βάση με το
+	πρώτο γράμμα κεφαλαίο τότε δεν θα πάρετε κανένα αποτέλεσμα.</p>
+
+<img src="postgresql-unit3/postgresql-unit3-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Φυσικά όλες οι βάσεις έχουν το ίδιο πρόβλημα και έχει ήδη λυθεί αυτό με την χρήση των functions που μας προσφέρει η
+	ίδια η βάση. Για αυτό θα μιλήσουμε σε μελλοντικές ενότητες. Απλά για τώρα προσέξτε πως φιλτράρετε τα δεδομένα σας
+	όταν περιέχουν Strings.</p>
+
+<p>Εκτός από το σύμβολο της ισότητας, μπορούμε να χρησιμοποιήσουμε και άλλους Comparison Operators. Ο παρακάτω πίνακας
+	σας δίνει μια εικόνα των επιλογών που έχετε.</p>
+
+<p><strong>Standard Comparison Operators</strong></p>
+<img src="postgresql-unit3/postgresql-unit3-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Φυσικά, οι comparison operators έχουν περισσότερη αξία όταν χρησιμοποιηθούν στο WHERE clause για να φιλτράρουν στήλες
+	με αριθμητικά δεδομένα. Στο επόμενο παράδειγμα θέλουμε να βρούμε από τον πίνακα orders πόσες παραγγελίες έχουν
+	πραγματοποιηθεί από τον εργαζόμενο με id = 3.</p>
+
+<img src="postgresql-unit3/postgresql-unit3-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Όταν έχουμε αριθμούς δεν χρησιμοποιούμε single quotes. Προσέξτε αυτή την διαφορά από το προηγούμενο παράδειγμα.</p>
+
+<p>Ας δούμε ακόμα ένα παράδειγμα όπου αυτή την φορά χρησιμοποιούμε το >= comparison operator. Ψάχνουμε να βρούμε τον
+	αριθμό παραγγελίας, τον αριθμό του προϊόντος και την ποσότητα για εκείνες τις παραγγελίες όπου η ποσότητα είναι
+	μεγαλύτερη ή ίση του αριθμού 20.</p>
+
+<img src="postgresql-unit3/postgresql-unit3-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+
+<p>Την ίδια λογική ακριβώς μπορούμε να την εφαρμόσουμε και σε στήλες όπου υπάρχουν ημερομηνίες. Για να φιλτράρουμε τα
+	δεδομένα με βάση μια ημερομηνία μπορούμε να χρησιμοποιήσουμε όλους τους comparison operators που έχουμε μάθει όμως η
+	ημερομηνία χρειάζεται να είναι μέσα σε single quotes. Επίσης ανάλογα με το internalization και τα settings που έχουν
+	χρησιμοποιηθεί κατά την εγκατάσταση της βάσης θα είναι διαφορετικός ο τρόπος εγγραφής της ημερομηνίας στον πίνακα.
+	Στην Northwind βάση δεν έχουμε επιλέξει καμία τροποποίηση όσο αφορά τα settings οπότε χρησιμοποιείται ο τρόπος
+	εγγραφής της χώρας USA.</p>
+
+<p>Ας δούμε λοιπόν ένα παράδειγμα όπου ζητάμε να δούμε τον αριθμό παραγγελίας και τον κωδικό του πελάτη για τις
+	παραγγελίας που έγιναν από τις 12 Αυγούστου του 1996 και μετά.</p>
+
+<img src="postgresql-unit3/postgresql-unit3-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+	class="center">
+<p></p>
+<!--##############################################################################################################################################################################################-->
 									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
