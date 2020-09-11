@@ -7,7 +7,8 @@
 	<title>Δωρεάν Μαθήματα SQL και PostgreSQL Administration</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
-		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL και PostGreSQL Administration">
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  και PostGreSQL Administration">
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="SQL, queries, Database, Database Administration,
 	basic select statements, διαχείριση βάσεων, sql αιτήματα
@@ -147,7 +148,8 @@
 										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL και PostgreSQL Administration</h1>
 										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
 													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
-											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">SQL & PostgreSQL Administration</a></span></h2>
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 6 -
+												Connecting to PostgreSQL using psql</a></span></h2>
 									</div>
 								</div>
 							</div>
@@ -169,52 +171,160 @@
 									</div>
 									<div class="desc desc2">
 										<h3 align="center"><a
-												href="https://kassapoglou.github.io/spring/spring-programming.html">ΔΩΡΕΑΝ
-												ΜΑΘΗΜΑΤΑ SQL ΚΑΙ PostgreSQL Administration</a></h3>
-													
-					<p>Κάθε σύγχρονη επιχείρηση διαθέτει δεδομένα, τα οποία απαιτούν κάποια οργανωμένη μέθοδο ή μηχανισμό για την διατήρηση και ανάκτηση τους. Όταν τα δεδομένα διατηρούνται εντός μιας βάσης δεδομένων, αυτός ο μηχανισμός αναφέρεται ως σύστημα διαχείρισης βάσεων δεδομένων (DBMS). </p>
+												href="https://kassapoglou.github.io/spring/spring-programming.html">
+												PostgreSQL Unit 6 - Connecting to PostgreSQL using psql</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
+<p>Στο σημερινό δωρεάν μάθημα SQL θα δούμε πως μπορούμε, αντί του pgAdmin4, να χρησιμοποιήσουμε το command line για να ενωθούμε στην βάση και να εκτελέσουμε τις ίδιες εντολές που εκτελούμε μέσα από το γραφικό περιβάλλον του pgAdmin4.</p>
 
-					<p>Οι σύγχρονες βάσεις δεδομένων σε συνδυασμό με τις web τεχνολογίες είναι ένας τυπικός συνδυασμός που
-						χρησιμοποιείται από τις επιχειρήσεις για τη διαχείριση των δεδομένων τους και στο να παραμείνουν
-						ανταγωνιστικές. </p>
+<p>Οι εντολές για να ενωθούμε είτε είμαστε σε περιβάλλον Windows είτε σε περιβάλλον Unit είναι οι ίδιες. Τα δικά μας παραδείγματα θα είναι όλα σε Windows λειτουργικό σύστημα. Οπότε ανοίξτε ένα CMD terminal και βρείτε το path όπου βρίσκεται το psql utility.</p>
 
-					<p>Στις ενότητες που θα αναπτύξουμε, θα αναλύσουμε τις βασικές εντολές SQL με τις οποίες διαχειριζόμαστε τα
-						δεδομένα μιας PostgreSQL βάσης όπως και κάποιες μεθόδους συντήρησης και ασφάλειας της ίδιας της βάσης. Οι περισσότερες
-						από τις SQL εντολές που θα αναλύσουμε μπορούν να εφαρμοστούν με σχεδόν καμία αλλαγή και σε άλλες βάσεις
-						δεδομένων όπως Oracle ή MySQL. Η PostgreSQL είναι μια εντελώς δωρεάν βάση δεδομένων, έτοιμη για production-use
-						και με ένα τεράστιο community που απαντάει σε όλες σας τις ερωτήσεις.</p>
+<img src="postgresql-unit6/postgresql-unit6-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
 
-									</div>
-									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-</form></center>
-									<h1 align="center">ΕΝΟΤΗΤΕΣ</h1>
-						  <p>Ενότητα 1 - <a href="postgresql-unit1-postgresql-installation-and-database-setup.html">
-						  		<font color="#0000CC">PostgreSQL installation and database setup</font>
-						  	</a><br /></p>
-							   <p>Ενότητα 2 - <a href="postgresql-unit2-postgresql-select-statements.html">
-						  		<font color="#0000CC">SELECT Statements</font>
-						  	</a><br /></p>
-							<p>Ενότητα 3 - <a href="postgresql-unit3-using-where-with-strings-numbers-and-dates.html">
-						  		<font color="#0000CC">Using WHERE with Strings, Numbers and Dates</font>
-						  	</a><br /></p>
-							  <p>Ενότητα 4 - <a href="postgresql-unit4-combining-where-with-logical-operators-between-and-in.html">
-								<font color="#0000CC">Combining WHERE with Logical Operators, BETWEEN and IN</font>
-							</a><br /></p>
-							<p>Ενότητα 5 - <a href="postgresql-unit5-postgreSQL-schema-explanation.html">
-								<font color="#0000CC">PostgreSQL Schema explanation</font>
-							</a><br /></p>
-							<p>Ενότητα 6 - <a href="postgresql-unit6-connecting-to-postgresql-using-psql.html">
-								<font color="#0000CC">Connecting to PostgreSQL using psql</font>
-							</a><br /></p>
-						 <!-- <p >Ενότητα 2 - <a href="spring-unit2-constructor-based-dependency-injection.html"><font color="#0000CC">Constructor-based Dependency Injection</font> </a><br /></p>
-						  <p >Ενότητα 3 - <a href="spring-unit3-constructor-arg-attributes.html"><font color="#0000CC">Constructor-arg attributes</font> </a><br /></p>-->
-								</div>
-							</div>
-						</div>
+<p>Για να ενωθούμε στη βάση έχουμε δύο τρόπους μέσα από το command line. Ο πρώτος είναι ο αναλυτικός και ο δεύτερος ο σύντομος.</p>
+<p>Ο αναλυτικός τρόπος για να ενωθούμε στην βάση Northwind από το command line είναι ο εξής:</p>
+
+<p><strong>psql --port=5432 --host=localhost --dbname=Northwind --username=postgres</strong></p>
+
+<img src="postgresql-unit6/postgresql-unit6-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Ενώ ο πιο σύντομος συντακτικά τρόπος είναι ο εξής:</p>
+
+<p><strong>psql -p 5432 -h locahost -d Northwind -U postgres</strong></p>
+
+<p>Υπάρχει όμως και ακόμα πιο εύκολος τρόπος. Αν πάμε στο start menu των Windows και ανοίξουμε την κατηγορία PostgreSQL θα δούμε ότι έχει εγκατασταθεί ήδη ένα SQL Shell που εκτελεί την psql εντολή αυτόματα. Αυτό που πρέπει να εισάγουμε είναι κάποια συγκεκριμένα στοιχεία όπως την δικτυακή τοποθεσία της βάσης , τον χρήστη με τον οποίο θέλουμε να ενωθούμε κτλ.</p>
+
+
+<img src="postgresql-unit6/postgresql-unit6-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Όταν τρέξουμε το πρόγραμμα, πρώτα θα μας ζητηθεί να ορίσουμε που βρίσκεται η βάση. Στο δικό μας παράδειγμα είναι localhost. Μετά ακολουθεί το όνομα της βάσης το οποίο στο παράδειγμα μας είναι Northwind. Η πόρτα, εφόσον δεν την έχετε αλλάξει, είναι η 5432. Το όνομα του χρήστη όπως και το password στο δικό μας παράδειγμα είναι και τα δύο postgres.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα που έχουμε ενωθεί στην βάση μπορούμε να εκτελέσουμε τα ίδια ακριβώς Queries όπως τα τρέχαμε μέσα από το γραφικό περιβάλλον του pgAdmin4.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Θα πρέπει να ανοίξετε το παράθυρο λίγο περισσότερο αν έχετε μεγαλύτερη οθόνη έτσι ώστε το αποτέλεσμα να φαίνεται περισσότερο οργανωμένο. Αν θέλετε τώρα να εγκαταλείψετε αυτό το ειδικό terminal, δεν έχετε παρά να γράψετε <strong>\q</strong></p>
+
+<img src="postgresql-unit6/postgresql-unit6-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Όσο χρήσιμος και αν φαίνεται αυτός ο τρόπος, ειδικά σε περιβάλλοντα Unix,  περιλαμβάνει πληροφορίες που πρέπει να επαναλαμβάνουμε και να γράφουμε κάθε φορά που ενεργοποιούμε μια ένωση στη βάση μέσα από το command prompt. Για να αποφύγουμε λοιπόν αυτή την διαδικασία μπορούμε να χρησιμοποιήσουμε δύο διαφορετικούς τρόπους. Ο πρώτος τρόπος είναι να ορίσουμε Environment variables και ο δεύτερος να χρησιμοποιήσουμε ένα αρχείο σαν service file. Πάμε όμως να τα δούμε ένα προς ένα.</p>
+
+<p>Για να ορίσουμε τα στοιχεία που χρειάζονται για να ενωθούμε στη βάση, μπορούμε να χρησιμοποιήσουμε Environment Variables. Αυτές είναι συγκεκριμένες λέξεις που γράφονται με κεφαλαία γράμματα και είναι οι εξής:</p>
+<p><strong>PGHOST</strong></p>
+<p><strong>PGPORT</strong></p>
+<p><strong>PGUSER</strong></p>
+<p><strong>PGPASSWORD</strong></p>
+<p><strong>PGDATABASE</strong></p>
+
+<p>Για να μπορέσουμε να τα περάσουμε αυτά τα στοιχεία μόνιμα στον υπολογιστή μας, θα πρέπει να δηλώσουμε στα Windows τα Environment Variables. Ανοίγουμε λοιπόν το System Properties στα Windows και πατάμε το Environment Variables κουμπί.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα θέλουμε να δημιουργήσουμε αυτές τις μεταβλητές. Οπότε πατάμε στο New κουμπί κάτω από το User Variables.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-8.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Ορίζουμε λοιπόν μια προς μια όλες τις μεταβλητές με αυτό το τρόπο έτσι ώστε να αναγνωρίζονται επίσημα από τα Windows.</p>
+<img src="postgresql-unit6/postgresql-unit6-9.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<img src="postgresql-unit6/postgresql-unit6-10.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αν τώρα πάμε στο directory όπου βρίσκεται το <strong>psql</strong> utility και το εκτελέσουμε, θα δούμε ότι ενωνόμαστε απευθείας στην Northwind βάση.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα αν θέλουμε αντί για ένα σταθερό configuration να έχουμε πολλαπλά configurations τότε η λύση με τις Environmental Variables δεν θα μας βοηθήσει και τόσο. Για να προσεγγίσουμε ένα τέτοιο πρόβλημα πρέπει για αρχή να δημιουργήσουμε ένα αρχείο με το όνομα <strong>pg_service.conf</strong>. Μέσα σε αυτό το αρχείο ορίζουμε τα στοιχεία που έχει κάθε ένωση. Στην ομάδα των στοιχείων δίνουμε ένα όνομα. Για παράδειγμα:</p>
+
+<img src="postgresql-unit6/postgresql-unit6-12.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Το αρχείο θα πρέπει να το σώσουμε με Unix format. Για αυτή την διαδικασία καλό θα ήταν να χρησιμοποιήσετε το Notepad++. Πηγαίνετε <strong>Edit -> EOL Conversion -> Unix (LF)</strong>.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-13.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Κάνουμε Save το αρχείο.</p>
+
+<p>Τώρα πρέπει να προσθέσουμε στα Environment Variables των Windows την τοποθεσία του αρχείου. Αυτό γίνεται προσθέτοντας δύο μεταβλητές: <strong>PGSERVICEFILE</strong> και <strong>PGSYSCONFDIR</strong>. Το δικό μου αρχείο το έχω σώσει εκεί που βρίσκεται και το psql utility.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-14.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα είμαστε έτοιμοι να επιλέξουμε ποιο από τα δύο configuration θέλουμε να ενεργοποιήσουμε για την ένωσή μας στην βάση. Σε αυτό το σημείο θα πρέπει να κάνουμε <strong>Restart τα windows</strong> για να βεβαιωθούμε ότι έχουν ενεργοποιηθεί οι καινούργιες μεταβλητές που προσθέσαμε.</p>
+
+<p>Ανοίγουμε λοιπόν ένα cmd terminal και πηγαίνουμε στο path όπου βρίσκεται το psql utility. Γράφουμε μετά την εντολή <strong>psql service=testservice</strong> για να καλέσουμε το πρώτο configuration από το αρχείο ή <strong>productionservice</strong> για να καλέσουμε το δεύτερο configuration.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-15.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Πριν κλείσουμε ας δούμε μερικές ακόμα χρήσιμες εντολές που μπορούμε να τρέξουμε μέσα από το psql περιβάλλον της PostgreSQL. Ας υποθέσουμε λοιπόν ότι έχουμε ενωθεί ήδη στην βάση Northwind με έναν από τους πολλαπλούς τρόπους που μόλις εξηγήσαμε. Θα επιθυμούσαμε όμως να είχαμε μια εικόνα τι άλλες βάσεις υπάρχουν στον PostgreSQL Server που έχουμε εγκαταστήσει. Για να δούμε αυτή την πληροφορία γράφουμε την εξής εντολή:</p>
+
+<img src="postgresql-unit6/postgresql-unit6-16.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Για να καθαρίσουμε την οθόνη μας, μπορούμε να γράψουμε την εξής εντολή:</p>
+
+<img src="postgresql-unit6/postgresql-unit6-17.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Για να αλλάξουμε από την Northwind σε κάποια άλλη βάση που ίσως έχουμε εγκαταστήσει τότε γράφουμε <strong>\c</strong> και το όνομα της βάσης.</p>
+
+<img src="postgresql-unit6/postgresql-unit6-18.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Για να δούμε όλα τα schemas που υπάρχουν σε μια συγκεκριμένη βάση εκτελούμε την εξής εντολή:</p>
+<img src="postgresql-unit6/postgresql-unit6-19.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αν θέλουμε να δούμε τους πίνακες που ανήκουν σε ένα συγκεκριμένο schema τότε γράφουμε την εξής εντολή (χρειάζεται και η τελεία για να εκτελεστεί σωστά η εντολή):</p>
+
+<img src="postgresql-unit6/postgresql-unit6-20.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+
+<!--##############################################################################################################################################################################################-->
 									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
