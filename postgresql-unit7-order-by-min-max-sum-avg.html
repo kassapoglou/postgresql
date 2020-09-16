@@ -7,7 +7,8 @@
 	<title>Δωρεάν Μαθήματα SQL και PostgreSQL Administration</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
-		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL και PostGreSQL Administration">
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  και PostGreSQL Administration">
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="SQL, queries, Database, Database Administration,
 	basic select statements, διαχείριση βάσεων, sql αιτήματα
@@ -147,7 +148,8 @@
 										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL και PostgreSQL Administration</h1>
 										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
 													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
-											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">SQL & PostgreSQL Administration</a></span></h2>
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 7 -
+												ORDER BY, MIN, MAX, SUM, AVG</a></span></h2>
 									</div>
 								</div>
 							</div>
@@ -169,55 +171,110 @@
 									</div>
 									<div class="desc desc2">
 										<h3 align="center"><a
-												href="https://kassapoglou.github.io/spring/spring-programming.html">ΔΩΡΕΑΝ
-												ΜΑΘΗΜΑΤΑ SQL ΚΑΙ PostgreSQL Administration</a></h3>
-													
-					<p>Κάθε σύγχρονη επιχείρηση διαθέτει δεδομένα, τα οποία απαιτούν κάποια οργανωμένη μέθοδο ή μηχανισμό για την διατήρηση και ανάκτηση τους. Όταν τα δεδομένα διατηρούνται εντός μιας βάσης δεδομένων, αυτός ο μηχανισμός αναφέρεται ως σύστημα διαχείρισης βάσεων δεδομένων (DBMS). </p>
+												href="https://kassapoglou.github.io/spring/spring-programming.html">
+												PostgreSQL Unit 7 - ORDER BY, MIN, MAX, SUM, AVG</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
 
-					<p>Οι σύγχρονες βάσεις δεδομένων σε συνδυασμό με τις web τεχνολογίες είναι ένας τυπικός συνδυασμός που
-						χρησιμοποιείται από τις επιχειρήσεις για τη διαχείριση των δεδομένων τους και στο να παραμείνουν
-						ανταγωνιστικές. </p>
+<p>Στο σημερινό δωρεάν μάθημα SQL θα μάθουμε πως να ταξινομούμε τα δεδομένα μας με την χρήση του ORDER BY και πως να χρησιμοποιούμε τα έτοιμα functions που μας προσφέρει η PostgreSQL όπως AVG, MIN, MAX και SUM.</p>
 
-					<p>Στις ενότητες που θα αναπτύξουμε, θα αναλύσουμε τις βασικές εντολές SQL με τις οποίες διαχειριζόμαστε τα
-						δεδομένα μιας PostgreSQL βάσης όπως και κάποιες μεθόδους συντήρησης και ασφάλειας της ίδιας της βάσης. Οι περισσότερες
-						από τις SQL εντολές που θα αναλύσουμε μπορούν να εφαρμοστούν με σχεδόν καμία αλλαγή και σε άλλες βάσεις
-						δεδομένων όπως Oracle ή MySQL. Η PostgreSQL είναι μια εντελώς δωρεάν βάση δεδομένων, έτοιμη για production-use
-						και με ένα τεράστιο community που απαντάει σε όλες σας τις ερωτήσεις.</p>
+<p>Σε προηγούμενη ενότητα είχαμε χρησιμοποιήσει την εντολή DISTINCT μπροστά από μια στήλη για να πάρουμε τις μοναδικές τιμές που περιέχει η στήλη. Ένα τέτοιο παράδειγμα είναι το εξής:</p>
 
-									</div>
-									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick" />
-<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-</form></center>
-									<h1 align="center">ΕΝΟΤΗΤΕΣ</h1>
-						  <p>Ενότητα 1 - <a href="postgresql-unit1-postgresql-installation-and-database-setup.html">
-						  		<font color="#0000CC">PostgreSQL installation and database setup</font>
-						  	</a><br /></p>
-							   <p>Ενότητα 2 - <a href="postgresql-unit2-postgresql-select-statements.html">
-						  		<font color="#0000CC">SELECT Statements</font>
-						  	</a><br /></p>
-							<p>Ενότητα 3 - <a href="postgresql-unit3-using-where-with-strings-numbers-and-dates.html">
-						  		<font color="#0000CC">Using WHERE with Strings, Numbers and Dates</font>
-						  	</a><br /></p>
-							  <p>Ενότητα 4 - <a href="postgresql-unit4-combining-where-with-logical-operators-between-and-in.html">
-								<font color="#0000CC">Combining WHERE with Logical Operators, BETWEEN and IN</font>
-							</a><br /></p>
-							<p>Ενότητα 5 - <a href="postgresql-unit5-postgreSQL-schema-explanation.html">
-								<font color="#0000CC">PostgreSQL Schema explanation</font>
-							</a><br /></p>
-							<p>Ενότητα 6 - <a href="postgresql-unit6-connecting-to-postgresql-using-psql.html">
-								<font color="#0000CC">Connecting to PostgreSQL using psql</font>
-							</a><br /></p>
-							<p>Ενότητα 7 - <a href="postgresql-unit7-order-by-min-max-sum-avg.html">
-								<font color="#0000CC">ORDER BY, MIN, MAX, SUM, AVG</font>
-							</a><br /></p>
-						 <!-- <p >Ενότητα 2 - <a href="spring-unit2-constructor-based-dependency-injection.html"><font color="#0000CC">Constructor-based Dependency Injection</font> </a><br /></p>
-						  <p >Ενότητα 3 - <a href="spring-unit3-constructor-arg-attributes.html"><font color="#0000CC">Constructor-arg attributes</font> </a><br /></p>-->
-								</div>
-							</div>
-						</div>
+<img src="postgresql-unit7/postgresql-unit7-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αν και τα δεδομένα που λαμβάνουμε σαν αποτέλεσμα είναι αυτά ακριβώς που ζητάμε, το πρόβλημα που έχουμε είναι ότι σε ένα μεγάλο μέγεθος δεδομένων δεν μπορούμε εύκολα να βγάλουμε συμπεράσματα γιατί δεν υπάρχει κάποια ταξινόμηση π.χ αλφαβητική. Στην παραπάνω εικόνα το Belgium είναι έκτο ενώ η Spain είναι δεύτερη. Ένα τέτοιο αποτέλεσμα θα μας πάρει κάποιο χρόνο για να μπορούμε να το αναλύσουμε απλά κοιτάζοντας το.</p>
+
+<p>Για να αναλύσουμε πιο γρήγορα μια τέτοια λίστα με δεδομένα χρειαζόμαστε κάποια ταξινόμηση είτε αλφαβητική, είτε αριθμητική είτε ακόμα και χρονική. Αυτή την δυνατότητα μας την δίνει η εντολή ORDER BY. Η γενική δομή ενός query που περιέχει το ORDER BY είναι η εξής:</p>
+
+
+
+
+<p><strong><xmp>SELECT <column1>, <column2>,…</xmp></strong></p>
+<p><strong><xmp>FROM <table_name></xmp></strong></p>
+<p><strong><xmp>ORDER BY column1, column2, …ASC | DESC</xmp></strong></p>
+
+<p> Ας δούμε ένα συγκεκριμένο παράδειγμα, και θα κατανοήσουμε καλύτερα τις επιλογές που έχουμε με την χρήση του ORDER BY. Ζητάμε λοιπόν να δούμε μια λίστα με τις χώρες στις οποίες έχουμε προμηθευτές με αλφαβητική ταξινόμηση.</p>
+
+<img src="postgresql-unit7/postgresql-unit7-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αφού λοιπόν έχει εκτελεστεί το βασικό μέρος του query (δηλαδή το SELECT), πριν εμφανιστεί το αποτέλεσμα το ταξινομούμε αλφαβητικά. Η ταξινόμηση γίνεται με βάση την στήλη country. Όμως δεν είναι απαραίτητο να ταξινομούμε ένα αποτέλεσμα με στήλη που θα εμφανιστεί και στο αποτέλεσμα. Μπορούμε να χρησιμοποιήσουμε οποιαδήποτε στήλη. Το ASC σημαίνει Ascending δηλαδή από τον μικρότερο αριθμό, χαρακτήρα ή ημερομηνία προς το μεγαλύτερο ενώ το Descending (DESC) ακριβώς το αντίθετο. Ας δοκιμάσουμε και το DESC για να δούμε πως θα είναι το αποτέλεσμα.</p>
+
+<img src="postgresql-unit7/postgresql-unit7-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Στο query που μόλις δοκιμάσαμε, ας προσθέσουμε και την πόλη στην οποία βρίσκονται οι προμηθευτές. </p>
+
+<img src="postgresql-unit7/postgresql-unit7-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Ας εξηγήσουμε λίγο το αποτέλεσμα. Το Distinct εφαρμόζεται ταυτόχρονα και στις δύο στήλες. Οπότε, αν και έχουμε δύο φορές το όνομα Australia αλλάζει η city κάθε φορά. Ο συνδυασμός χώρας και πόλης από την στιγμή που είναι μοναδικός θα εμφανιστεί στο αποτέλεσμα. Τις χώρες τις έχουμε ορίσει να είναι ASC και τις πόλεις για κάθε χώρα να είναι DESC. Μπορείτε να κάνετε οποιοδήποτε συνδυασμό επιθυμείτε. </p>
+
+<p>Η PostgreSQL μας προσφέρει αρκετές έτοιμες functions που μπορούμε να χρησιμοποιήσουμε για να φιλτράρουμε ακόμα πιο πολύ τα αποτελέσματα μας. Δύο από αυτές τις functions είναι η MIN και η MAX. Το συντακτικό που πρέπει να ακολουθήσουμε για να εφαρμόσουμε αυτές τις functions στα δεδομένα μας είναι ο εξής:</p>
+
+<p>Για το MIN:</p>
+<p><strong><xmp>SELECT MIN(<column>)</xmp></strong></p>
+	<p><strong><xmp>FROM <table_name></xmp></strong></p>
+	<p><strong><xmp>WHERE <condition>;</xmp></strong></p>
+
+<p>Για το MAX:</p>
+		<p><strong><xmp>SELECT MAX(<column>)</xmp></strong></p>
+			<p><strong><xmp>FROM <table_name></xmp></strong></p>
+			<p><strong><xmp>WHERE <condition>;</xmp></strong></p>
+
+<p>Πότε όμως εφαρμόζονται αυτά τα functions? Για να το καταλάβουμε ας προσπαθήσουμε να απαντήσουμε το εξής ερώτημα: πότε ήταν η πρώτη παραγγελία που έγινε από την χώρα Ιταλία? Για να βρούμε την απάντηση θα πρέπει να βρούμε πια είναι η παλαιότερη ημερομηνία παραγγελίας που έγινε για να την χώρα Ιταλία. Αυτό σημαίνει ότι θα χρησιμοποιήσουμε την function MIN σε στήλη που περιέχει ημερομηνίες.</p>
+
+<img src="postgresql-unit7/postgresql-unit7-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Με την ίδια λογική, θα μπορούσαμε να απαντήσουμε πότε ήταν η τελευταία παραγγελία που εστάλη στη χώρα του Καναδά. Αυτή τη φορά όμως χρειαζόμαστε την MAX function για να μας δώσει την σωστή ημερομηνία.</p>
+
+<img src="postgresql-unit7/postgresql-unit7-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Ας δούμε ένα ακόμα παράδειγμα με περισσότερες απαιτήσεις. Αυτή τη φορά ζητάμε να βρούμε την παραγγελία εκείνη που από την ημερομηνία που εισήλθε στο σύστημα πήρε το μεγαλύτερο χρονικό διάστημα μέχρι να σταλθεί στον πελάτη στην χώρα της Γαλλίας. Αν και ακούγεται πολύπλοκο στην ουσία δεν είναι αν θυμάστε το γεγονός ότι μπορούμε να αφαιρέσουμε μια ημερομηνία από μια άλλη. Ο τρόπος που θα προσεγγίζαμε αυτό το πρόβλημα είναι ο εξής:</p>
+
+<img src="postgresql-unit7/postgresql-unit7-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Όπως ήδη καταλάβατε, με την έτοιμη λογική που μας προσφέρουν τα functions μπορούμε να πάρουμε γρήγορα αυτό που ζητάμε με τον λιγότερο δυνατόν κώδικα. Υπάρχουν δύο ακόμα functions που είναι πολύ συνηθισμένα σε όσους γράφουν SQL – και αυτά είναι το AVG και το SUM. Το Average (AVG) μας δίνει το μέσο όρο των τιμών μιας στήλης, ενώ το Summary (SUM) μας δίνει το άθροισμα των τιμών μιας στήλης. </p>
+
+<p>Ας υποθέσουμε λοιπόν ότι ζητάμε να βρούμε το μέσο όρο του φορτίου που έχει σταλθεί στην Βραζιλία. </p>
+
+<img src="postgresql-unit7/postgresql-unit7-8.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Για το επόμενο ερώτημα μας, θα χρειαστούμε μια έξτρα πληροφορία, και αυτή είναι το product_id που έχει το προϊόν Ipoh Coffe. Αυτή η πληροφορία βρίσκεται στον πίνακα products.</p>
+
+<img src="postgresql-unit7/postgresql-unit7-9.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα που γνωρίζουμε αυτή την πληροφορία μπορούμε να συγκεντρωθούμε στο κύριο μας ερώτημα που είναι το εξής: Ποιος είναι ο συνολικός αριθμός  πακέτων καφέ Ipoh Coffee (id=43) που έχουν παραγγελθεί μέχρι τώρα?</p>
+
+<img src="postgresql-unit7/postgresql-unit7-10.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<!--##############################################################################################################################################################################################-->
 									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
