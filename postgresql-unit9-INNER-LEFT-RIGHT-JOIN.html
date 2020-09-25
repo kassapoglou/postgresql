@@ -1,0 +1,569 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Δωρεάν Μαθήματα SQL και PostgreSQL Administration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		  content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων SQL
+		  και PostGreSQL Administration">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="SQL, queries, Database, Database Administration,
+	basic select statements, διαχείριση βάσεων, sql αιτήματα
+              δωρεάν, δωρεάν μαθήματα, δωρεάν σεμινάρια, μαθήματα SQL, σεμινάρια SQL" />
+	<meta name="author" content="Michail Kassapoglou" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-150900548-1');
+	</script>
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="upper-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<p>Welcome to Kassapoglou</p>
+						</div>
+						<!--<div class="col-xs-6 col-md-push-2 text-right">
+							<p>
+								<ul class="colorlib-social-icons">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								</ul>
+							</p>
+							<p class="btn-apply"><a href="#">Apply Now</a></p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div id="colorlib-logo"><a
+									href="https://kassapoglou.github.io/main/index.html">Kassapoglou</a></div>
+						</div>
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="https://kassapoglou.github.io/main/index.html">Home</a></li>
+								<li class="has-dropdown active">
+									<a href="https://kassapoglou.github.io/main/courses.html">Courses</a>
+									<!--<ul class="dropdown">
+										<li><a href="https://kassapoglou.github.io/java/java-programming.html">Java</a>
+										</li>
+										<li><a
+												href="https://kassapoglou.github.io/python/python-programming.html">Python</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/go/go-programming.html">GO</a></li>
+										<li><a
+												href="https://kassapoglou.github.io/javascript/javascript-programming.html">JavaScript</a>
+										</li>
+										<li><a href="https://kassapoglou.github.io/maven/learning-maven.html">Apache
+												Maven</a></li>
+										<li><a href="https://kassapoglou.github.io/camel/apache-camel-programming.html">Apache
+												Camel</a></li>
+										<li><a href="https://kassapoglou.github.io/spring/spring-programming.html">Spring
+												</a></li>
+									</ul>-->
+								</li>
+								<!--<li><a href="about.html">About</a></li>-->
+								<!--	<li><a href="event.html">Events</a></li>
+								<li><a href="news.html">News</a></li> -->
+								<li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+					<li style="background-image: url(images/postgresql2.png);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-6 col-sm-12 col-md-offset-3 slider-text">
+									<div class="slider-text-inner text-center">
+										<h1>ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ SQL και PostgreSQL Administration</h1>
+										<h2><span><a href="https://kassapoglou.github.io/main/index.html">Home</a> | <a
+													href="https://kassapoglou.github.io/main/courses.html">Courses</a> |
+											<a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html">PostgreSQL Unit 9 -
+												INNER, LEFT, and RIGHT JOIN</a></span></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="colorlib-classes">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="row row-pb-lg">
+							<div class="col-md-12 animate-box">
+								<div class="classes class-single">
+									<div class="classes-img" style="background-image: url(images/postgresql2.png);">
+										<span class="price text-center"><small>FREE</small></span>
+									</div>
+									<div class="desc desc2">
+										<h3 align="center"><a
+												href="https://kassapoglou.github.io/spring/spring-programming.html">
+												PostgreSQL Unit 9 - INNER, LEFT, and RIGHT JOIN</a></h3>
+																		<center>
+																			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+																				<input type="hidden" name="cmd" value="_s-xclick" />
+																				<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+																				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+																					border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+																					alt="Donate with PayPal button" />
+																				<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1"
+																					height="1" />
+																			</form>
+																		</center>
+
+<p>Στο σημερινό δωρεάν μάθημα SQL θα δούμε πως μπορούμε να λάβουμε δεδομένα ταυτόχρονα από δύο ή και περισσότερους πίνακες, πως αντιπροσωπεύεται μια σχέση ανάμεσα σε πίνακες μέσα στην βάση, και τι ακριβώς δεδομένα μπορούμε να λάβουμε με την χρήση του Left και του Right Join.</p>
+
+<p>Για να μπορέσουμε να λάβουμε ταυτόχρονα δεδομένα από δύο ή και περισσότερους πίνακες, θα πρέπει να πρώτα να ανακαλύψουμε αν αυτοί οι πίνακες συσχετίζονται μεταξύ τους. Αυτή την πληροφορία μπορούμε να την λάβουμε πολύ εύκολα αν δούμε τις στήλες από τους οποίους αποτελούνται οι πίνακες. Για παράδειγμα, ας υποθέσουμε ότι θέλουμε να βρούμε το όνομα του πελάτη, την ημερομηνία της παραγγελίας και την χώρα στην οποία θα αποσταλθεί η παραγγελία. Για να απαντήσουμε σε αυτό το ερώτημα θα πρέπει να ασχοληθούμε με δύο πίνακες: τον customers και τον orders. Ας δούμε πρώτα τις στήλες του customers.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Τώρα ας δούμε και της στήλες του πίνακα orders.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Θέλουμε τώρα λοιπόν να ψάξουμε και να βρούμε ποιες στήλες είναι κοινές ανάμεσα στους δύο πίνακες. Με μια γρήγορη αναζήτηση θα ανακαλύψουμε ότι η στήλη <strong>employee_id</strong> είναι κοινή και στους δύο πίνακες. Φυσικά αυτό δεν είναι κάτι τυχαίο. Η δομή και η αρχιτεκτονική της βάσης έχει οριστεί και καθοριστεί από κάποιον DBA, Database Architect ή Software Architect. Το γεγονός ότι υπάρχουν κοινές στήλες ανάμεσα στους πίνακες είναι μέρος της αρχικής σχεδίασης. Το πως δημιουργούμε πίνακες, στήλες σε πίνακες και σχέσεις ανάμεσα στους πίνακες είναι κάτι που θα μας απασχολήσει αργότερα. Για τώρα μας αρκεί το γεγονός ότι ανάμεσα στον customers και στον orders πίνακα υπάρχει μια κοινή στήλη με το όνομα customer_id.</p>
+
+<p>Ωραία, αφού γνωρίζουμε τους δύο πίνακες που περιέχουν τις πληροφορίες για τις οποίες ενδιαφερόμαστε, και αφού υπάρχει κοινή στήλη ανάμεσα στους πίνακες, μπορούμε να δημιουργήσουμε ένα query που ταυτόχρονα ζητάει πληροφορίες από τους δύο πίνακες χρησιμοποιώντας την κοινή στήλη σαν κοινό παράγοντα.</p>
+
+<p>Στην ουσία, αυτό που ζητάμε είναι να δούμε records (δηλαδή τιμές πεδίων ανά πίνακα) αν και εφόσον υπάρχουν. Δηλαδή θέλουμε να δούμε τις παραγγελίες του πελάτη αν και εφόσον έχουν γίνει παραγγελίες. Για να μπορέσουμε να απαιτήσουμε δεδομένα από πολλαπλούς πίνακες χρησιμοποιούμε την εντολή <strong>Inner Join</strong>.</p>
+
+<p>Για την σωστή εκτέλεση της εντολής θα πρέπει να γράψουμε και το όνομα του πίνακα μαζί με το όνομα της κοινής στήλης για να μπορεί να αναγνωρίσει η βάση σε ποια στήλη αναφερόμαστε κάθε φορά. Για παράδειγμα: <strong>customers.customer_id</strong>.</p>
+
+<p>Ακόμα όμως δεν έχουμε απαντήσει την ερώτηση: ποια είναι η δομή ενός query που περιέχει Inner Join?</p>
+
+<p><strong><xmp>SELECT column_names</xmp></strong></p>
+	<p><strong><xmp>FROM table1</xmp></strong></p>
+	<p><strong><xmp>INNER JOIN table2 ON table1.column_name = table2.column_name;</xmp></strong></p>
+
+<p>Επειδή την εντολή <strong>JOIN</strong>, εξ ορισμού, η PostgreSQL την διαχειρίζεται σαν INNER JOIN μπορούμε να παραλείψουμε το INNER και να έχουμε το ίδιο ακριβώς αποτέλεσμα.</p>
+
+<p><strong><xmp>SELECT column_names</xmp></strong></p>
+	<p><strong><xmp>FROM table1</xmp></strong></p>
+	<p><strong><xmp>JOIN table2 ON table1.column_name = table2.column_name;</xmp></strong></p>
+
+<p>Ας δούμε πρώτα το query που θα γράφαμε για να λάβουμε την επιθυμητή πληροφορία από την βάση και μετά θα δώσουμε μια ποιο ολοκληρωμένη εξήγηση.</p>
+
+
+<img src="postgresql-unit9/postgresql-unit9-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Για να κατανοήσουμε καλύτερα την όλη διαδικασία, ας δούμε και τα δεδομένα όπως βρίσκονται μέσα στους δύο πίνακες.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<img src="postgresql-unit9/postgresql-unit9-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Σαν αρχή, το query θα πάει πρώτα να ελέγξει και να επιβεβαιώσει την ύπαρξη των δύο πινάκων (<strong>FROM order JOIN customers</strong>). Αμέσως μετά θα πάει σε κάθε πίνακα και θα ελέγξει την ύπαρξη της στήλης customer_id. Όταν επιβεβαιωθεί και αυτός ο έλεγχος, τότε η βάση ξεκινάει να διαβάζει την στήλη customer_id γραμμή προς γραμμή από τον πίνακα orders . Για κάθε row που διαβάζει από τον πίνακα orders, σταματάει και ελέγχει όλη την στήλη customer_id από τον πίνακα customers. Αν βρει κοινή τιμή (δηλαδή η τιμή να είναι ίδια όπως VINET), τότε πηγαίνει στο SELECT και μας δίνει το company_name από τον έναν πίνακα και το order_date και ship_country από τον δεύτερο. Μετά η βάση πηγαίνει στην επόμενη γραμμή του customer_id του πίνακα orders. Αφού διαβάσει την τιμή, διαβάζει όλη την στήλη από τον πίνακα customers και όπου βρει την ίδια τιμή τότε πάλι μας παρέχει τις πληροφορίες από τις στήλες που ζητάμε από το SELECT. Η διαδικασία αυτή συνεχίζεται μέχρι να συγκριθούν για ισότητα όλες οι τιμές της στήλης customer_id του ενός πίνακα με την customer_id στήλη του άλλου πίνακα.</p>
+
+<p>Τώρα που καταλάβαμε πως γίνεται το INNER JOIN ή απλά JOIN σε δύο πίνακες, ας δούμε πως μπορούμε να ζητήσουμε πληροφορίες από περισσότερους πίνακες αν και εφόσον μας είναι απαραίτητο. Η λογική είναι πολύ απλή – απλά προσθέτουμε επιπλέον INNER JOIN clauses με το όνομα του επιπλέον πίνακα και της στήλης με την οποία θα γίνει η σύγκριση. Η γενική δομή είναι η εξής:</p>
+
+<p><strong><xmp>SELECT column_names</xmp></strong></p>
+	<p><strong><xmp>FROM table1</xmp></strong></p>
+	<p><strong><xmp>INNER JOIN table2 ON table1.column_name = table2.column_name</xmp></strong></p>
+	<p><strong><xmp>INNER JOIN table3 ON table3.column_name = table1.column_name</xmp></strong></p>
+
+<p>Ή αν θέλουμε μπορούμε να παραλείψουμε την λέξη INNER και να γράψουμε το query ως εξής:</p>
+
+<p><strong><xmp>SELECT column_names</xmp></strong></p>
+	<p><strong><xmp>FROM table1</xmp></strong></p>
+	<p><strong><xmp>JOIN table2 ON table1.column_name = table2.column_name</xmp></strong></p>
+	<p><strong><xmp>JOIN table3 ON table3.column_name = table1.column_name</xmp></strong></p>
+
+<p>Για να δουλέψουμε με ένα συγκεκριμένο παράδειγμα, ας θεωρήσουμε ότι επιθυμούμε να βρούμε το company_name, order_date, product_id, unit_price και quantity που προέρχονται από τους πίνακες customers, orders και order_details.</p>
+
+<p>Η υλοποίηση ενός τέτοιου query είναι η εξής:</p>
+
+<img src="postgresql-unit9/postgresql-unit9-6.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αν προσέξετε το query που μόλις εκτελέσαμε, θα δείτε πως ανάμεσα στον πίνακα orders και order_details η κοινή στήλη είναι η order_id ενώ ανάμεσα στους πίνακες customer και orders η κοινή στήλη είναι η customer_id. Στην ουσία βρίσκουμε πρώτα το id του customer από τον πίνακα customers και ψάχνουμε να βρούμε στον πίνακα orders αν υπάρχει κάποια παραγγελία από τον συγκεκριμένο πελάτη. Αν ναι, τότε συνεχίζουμε και βρίσκουμε με το order_id περισσότερες πληροφορίες για την παραγγελία.</p>
+
+<p>Θα μπορούσαμε να φιλτράρουμε το αποτέλεσμα του προηγούμενου query με το WHERE όπως ήδη έχουμε κάνει σε προηγούμενα δωρεάν μαθήματα SQL? Φυσικά και μπορούμε. Ας υποθέσουμε λοιπόν ότι θέλουμε να δούμε τις ίδιες πληροφορίες όταν όμως το συνολικό ποσόν της παραγγελίας ξεπερνάει το 500.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-7.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Εκτός τώρα από το INNER JOIN υπάρχουν δύο ακόμα κατηγορίες που ονομάζονται <strong>LEFT JOIN</strong> και <strong>RIGHT JOIN</strong>. Στην ουσία αν καταλάβετε το ένα τότε αυτόματα ξέρετε πως λειτουργεί και το δεύτερο. Για να κατανοήσετε όμως καλύτερα την χρησιμότητα τους ας γυρίσουμε πίσω στο INNER JOIN και ας τρέξουμε ένα απλό query.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-8.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Με το συγκεκριμένο query ζητάμε να δούμε τους πελάτες που έχουν πραγματοποιήσει κάποια παραγγελία. Αν δηλαδή υπάρχει ένα customer_id στον πίνακα orders με την ίδια τιμή που έχει  και το customer_id στον πίνακα customers τότε σημαίνει ότι έχει γίνει κάποια παραγγελία.</p>
+
+<p>Τώρα ενδιαφερόμαστε να δούμε στα σίγουρα μια ολόκληρη λίστα με όλους τους πελάτες και προαιρετικά, αν και εφόσον υπάρχουν, και εκείνους τους πελάτες που ικανοποιούν την συνθήκη δηλαδή έχουν παραγγείλει. Στα σίγουρα όμως θέλουμε να δούμε τους όλους τους πελάτες. Πως μπορούμε να το υλοποιήσουμε αυτό? Εδώ λοιπόν έρχεται να μας βοηθήσει το LEFT JOIN. Ας δούμε πως γράφεται και μετά θα εξηγήσουμε το αποτέλεσμα.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-9.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Εκ πρώτης όψεως ίσως σας φανεί ότι το LEFT JOIN σας παρουσιάζει το ίδιο αποτέλεσμα όπως και το INNER JOIN. Όμως αν πάτε μέχρι το τέλος των αποτελεσμάτων θα δείτε πως υπάρχουν και εταιρείες (δηλαδή πελάτες) για τους οποίους δεν υπάρχει order_id δηλαδή δεν έχουν ενεργοποιήσει καμία παραγγελία. </p>
+
+<p>Οπότε πως λειτουργεί ένα LEFT JOIN? Ο πιο εύκολος τρόπος για να το θυμάστε είναι απλά να δείτε τον τρόπο με τον οποίο γράφουμε την συγκεκριμένη γραμμή – FROM customers LEFT JOIN orders. Οπτικά λοιπόν, δηλαδή στα αριστερά του LEFT (αυτό σημαίνει και η αγγλική λέξη left), υπάρχει ο πίνακας customers. Οπότε LEFT σημαίνει ότι από τον πίνακα που βρίσκεται αριστερά του LEFT JOIN (δηλαδή customers) ζητάμε να δούμε όλα τα δεδομένα, ενώ από τον πίνακα που είναι δεξιά από το LEFT JOIN ζητάμε προαιρετικά να δούμε και εκείνα τα δεδομένα που ικανοποιούν την συνθήκη. Στο συγκεκριμένο παράδειγμα, για τους δύο συγκεκριμένους πελάτες δεν υπάρχουν παραγγελίες οπότε τα πεδία έχουν null τιμές. Ο λόγος που εμφανίζεται αυτό το αποτέλεσμα είναι γιατί ζητήσαμε να δούμε όλους τους πελάτες σαν πρώτο όρο και σαν δεύτερο όρο να δούμε ποιοι από τους πελάτες ικανοποιούν την συνθήκη. Οι πελάτες χωρίς παραγγελίες προέρχονται από τον πρώτη μας απαίτηση.</p>
+
+<p>Αν τώρα θέλαμε να δούμε μόνο εκείνους τους πελάτες που δεν έχουν παραγγείλει ακόμα μπορούσαμε να προσθέσουμε ένα WHERE clause με την εξής λογική:</p>
+
+<img src="postgresql-unit9/postgresql-unit9-10.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+<p>Αν τώρα αντί για LEFT χρησιμοποιούσαμε RIGHT JOIN τότε θα ζητούσαμε να δούμε όλα τα δεδομένα του πίνακα από τα δεξιά του RIGHT JOIN και προαιρετικά εκείνα τα δεδομένα που ικανοποιούν την συνθήκη σε σχέση με τον πίνακα από τα αριστερά.</p>
+
+<p>Αν σκεφτείτε ότι μπορούμε απλά να αντιστρέψουμε την σειρά των πινάκων και να πάρουμε το ίδιο ακριβώς αποτέλεσμα με το RIGHT JOIN τότε είσαστε απολύτως σωστοί.</p>
+
+<img src="postgresql-unit9/postgresql-unit9-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια SQL και PostgreSQL"
+class="center">
+<p></p>
+
+
+<!--##############################################################################################################################################################################################-->
+									<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></center>
+						<!--<div class="row row-pb-lg animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">23 Comments</h2>
+								<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person1.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person2.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+						   	<div class="review">
+						   		<div class="user-img" style="background-image: url(images/person3.jpg)"></div>
+						   		<div class="desc">
+						   			<h4>
+						   				<span class="text-left">Jacob Webb</span>
+						   				<span class="text-right">24 March 2018</span>
+						   			</h4>
+						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+						   			<p class="star">
+					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+						   			</p>
+						   		</div>
+						   	</div>
+							</div>
+						</div>-->
+
+						<!--<div class="row animate-box">
+							<div class="col-md-12">
+								<h2 class="colorlib-heading-2">Say something</h2>
+								<form action="#">
+									<div class="row form-group">
+										<div class="col-md-6">
+											<!-- <label for="fname">First Name</label> -->
+						<!--		<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+										</div>
+										<div class="col-md-6">
+											<!-- <label for="lname">Last Name</label> -->
+						<!--<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="email">Email</label> -->
+						<!--<input type="text" id="email" class="form-control" placeholder="Your email address">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="subject">Subject</label> -->
+						<!--<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+										</div>
+									</div>
+
+									<div class="row form-group">
+										<div class="col-md-12">
+											<!-- <label for="message">Message</label> -->
+						<!--	<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="submit" value="Post Comment" class="btn btn-primary">
+									</div>
+								</form>	
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Subscribe Newsletter</h2>
+						<p>Subscribe our newsletter and get latest update</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-12">
+							<form class="form-inline qbstp-header-subscribe">
+								<div class="col-three-forth">
+									<div class="form-group">
+										<input type="text" class="form-control" id="email" placeholder="Enter your email">
+									</div>
+								</div>
+								<div class="col-one-third">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Subscribe Now</button>
+									</div>
+								</div>
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						<h4>PURPOSE</h4>
+						<p>Ο πρωταρχικός λόγος που με ώθησε στο να δημιουργήσω αυτή την
+							ιστοσελίδα και να προσφέρω δωρεάν μαθήματα είναι γιατί πιστεύω ότι
+							η γνώση, σε οποιοδήποτε επίπεδο, πρέπει να μεταδίδεται για να έχει αξία.</p>
+						<p>
+						<ul class="colorlib-social-icons">
+							<!--<li><a href="#"><i class="icon-twitter"></i></a></li>-->
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i
+									class="icon-linkedin"></i></a></li>
+							<!--<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
+						</ul>
+						</p>
+					</div>
+					<div class="col-md-3 colorlib-widget">
+						<h4>Quick Links</h4>
+						<p>
+						<ul class="colorlib-footer-links">
+							<!--<li><a href="#"><i class="icon-check"></i> About</a></li>-->
+							<!--<li><a href="#"><i class="icon-check"></i> Testimonials</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/"><i class="icon-check"></i>
+								Home</a></li>
+							<li><a href="https://kassapoglou.github.io/postgresql/postgresql-administration.html"><i class="icon-check"></i> PostgreSQL Administration</a></li>
+							<li><a href="https://kassapoglou.github.io/main/courses.html"><i
+									class="icon-check"></i> Courses</a></li>
+							<!--<li><a href="#"><i class="icon-check"></i> Event</a></li>
+                        <li><a href="#"><i class="icon-check"></i> News</a></li>-->
+							<li><a href="https://kassapoglou.github.io/main/contact.html"><i
+									class="icon-check"></i> Contact</a></li>
+						</ul>
+						</p>
+					</div>
+
+					<!--<div class="col-md-3 colorlib-widget">
+                    <h4>Recent Post</h4>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-1.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-2.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                    <div class="f-blog">
+                        <a href="blog.html" class="blog-img" style="background-image: url(images/blog-3.jpg);">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="blog.html">Creating Mobile Apps</a></h2>
+                            <p class="admin"><span>18 April 2018</span></p>
+                        </div>
+                    </div>
+                </div> -->
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Contact Info</h4>
+						<ul class="colorlib-footer-links">
+
+							<li><a href="tel://6976434707"><i class="icon-phone"></i> 6976434707</a></li>
+							<li><a href="mailto:michail.kassapoglou@gmail.com"><i class="icon-envelope"></i>
+								michail.kassapoglou@gmail.com</a></li>
+							<li><a href="kassapoglou.github.io/main"><i class="icon-location4"></i>
+								kassapoglou.github.io/main</a></li>
+							<li><a href="https://www.facebook.com/kassapoglou/?ref=bookmarks"><i
+									class="icon-facebook2"></i> Facebook</a></li>
+							<li><a href="https://www.linkedin.com/groups/4390739/"><i class="icon-linkedin"></i>
+								Linkedin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy;
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									Copyright &copy;<script>
+										document.write(new Date().getFullYear());
+									</script> All rights reserved | This template is made with <i class="icon-heart"
+																								  aria-hidden="true"></i> by <a href="https://colorlib.com"
+																																target="_blank">Colorlib</a>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								</small><br>
+								<small class="block">Demo Images: <a href="http://unsplash.co/"
+																	 target="_blank">Unsplash</a>, <a href="http://pexels.com/"
+																									  target="_blank">Pexels</a></small>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html></html>
